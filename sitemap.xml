@@ -6,7 +6,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://luxai-qtrobot.github.io/about/</loc>
+     <loc>https://luxai-qtrobot.github.io/quickstart/</loc>
      <lastmod>2020-02-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -16,7 +16,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://luxai-qtrobot.github.io/manual/</loc>
+     <loc></loc>
+     
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://luxai-qtrobot.github.io/QA/</loc>
      <lastmod>2020-02-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -26,42 +31,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://luxai-qtrobot.github.io/QA/QTrobot-backup/</loc>
-     <lastmod>2020-02-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://luxai-qtrobot.github.io/QA/Microphone-Topic/</loc>
-     <lastmod>2020-02-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://luxai-qtrobot.github.io/QA/QTrobot-Mouse&Keyboard/</loc>
-     <lastmod>2020-02-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://luxai-qtrobot.github.io/QA/QTrobot-Csharp/</loc>
-     <lastmod>2020-02-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://luxai-qtrobot.github.io/QA/Wifi-configuration/</loc>
-     <lastmod>2020-02-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://luxai-qtrobot.github.io/QA/QTrobot-joint-limits/</loc>
-     <lastmod>2020-02-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://luxai-qtrobot.github.io/QA/QTrobot-SDK/</loc>
-     <lastmod>2020-02-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://luxai-qtrobot.github.io/QA/QTrobot-port-forward/</loc>
+     <loc>https://luxai-qtrobot.github.io/examples/</loc>
      <lastmod>2020-02-05</lastmod>
      <changefreq>daily</changefreq>
     </url>

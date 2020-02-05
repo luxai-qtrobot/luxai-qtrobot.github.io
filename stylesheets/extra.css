@@ -1,4 +1,5 @@
 .devButton {
+	min-width: 200px;
 	background-color:#68b5e4;
 	border-radius:15px;
 	border:2px solid white;
