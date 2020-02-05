@@ -53,3 +53,24 @@ img {
   grid-template-columns: 50% 50%;
   grid-gap: 0px;
 }
+
+[data-md-color-primary="indigo"] .md-tabs,
+[data-md-color-primary="indigo"] .md-header,
+
+
+footer {
+	background: rgb(175,174,214);
+	background: linear-gradient(180deg, rgba(175,174,214,1) 0%, rgba(104,181,228,1) 100%);
+}
+
+.md-footer-nav,
+.md-footer-meta {
+    background: transparent;
+}
+
+/* change link colors for grey theme */
+.md-header-nav__button:hover {
+    opacity: 1;
+    color: darkorange;
+    transition: color 0.5s;
+}
