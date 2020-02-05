@@ -26,8 +26,13 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://luxai-qtrobot.github.io/QA/QTrobot-joint-limits/</loc>
+     <lastmod>2020-02-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://luxai-qtrobot.github.io/QA/QTrobot-Mouse&Keyboard/</loc>
+     <lastmod>2020-02-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
@@ -36,18 +41,28 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://luxai-qtrobot.github.io/QA/Wifi-configuration/</loc>
+     <lastmod>2020-02-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://luxai-qtrobot.github.io/QA/QTrobot-backup/</loc>
+     <lastmod>2020-02-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://luxai-qtrobot.github.io/QA/QTrobot-port-forward/</loc>
+     <lastmod>2020-02-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://luxai-qtrobot.github.io/QA/QTrobot-Csharp/</loc>
+     <lastmod>2020-02-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://luxai-qtrobot.github.io/QA/QTrobot-SDK/</loc>
+     <lastmod>2020-02-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
