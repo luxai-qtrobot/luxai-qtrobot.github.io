@@ -1,6 +1,9 @@
 .devButton {
 	min-width: 200px;
 	background-color:#68b5e4;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
 	border-radius:15px;
 	border:2px solid white;
 	display:inline-block;
@@ -35,7 +38,11 @@
 
 img {
   border-radius: 5px 5px 0 0;
+	margin-left: auto;
+ 	margin-right: auto;
+	display: block;
 }
+
 
 .container {
   padding: 2px 16px;
@@ -57,7 +64,6 @@ img {
 [data-md-color-primary="indigo"] .md-tabs,
 [data-md-color-primary="indigo"] .md-header,
 
-
 footer {
 	background: rgb(175,174,214);
 	background: linear-gradient(180deg, rgba(175,174,214,1) 0%, rgba(104,181,228,1) 100%);
@@ -68,9 +74,19 @@ footer {
     background: transparent;
 }
 
-/* change link colors for grey theme */
-.md-header-nav__button:hover {
-    opacity: 1;
-    color: darkorange;
-    transition: color 0.5s;
+
+body, html {
+  /* The image used */
+  background-image: url(/img/luxai_illustration.png);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+
+	background-color: rgba(255,255,255,0.8);
+	background-attachment: fixed;
+	background-blend-mode: lighten;
 }
