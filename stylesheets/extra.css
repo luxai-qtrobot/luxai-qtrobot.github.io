@@ -75,7 +75,7 @@ footer {
 }
 
 
-body, html {
+.md-container {
   /* The image used */
   background-image: url(/img/luxai_illustration.png);
 
@@ -86,7 +86,7 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
 
-	background-color: rgba(255,255,255,0.8);
+	background-color: rgba(255,255,255,0.85);
 	background-attachment: fixed;
 	background-blend-mode: lighten;
 }
