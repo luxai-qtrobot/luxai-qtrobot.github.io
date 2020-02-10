@@ -73,20 +73,3 @@ footer {
 .md-footer-meta {
     background: transparent;
 }
-
-
-.md-container {
-  /* The image used */
-  background-image: url(/img/luxai_illustration.png);
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-
-	background-color: rgba(255,255,255,0.85);
-	background-attachment: fixed;
-	background-blend-mode: lighten;
-}

@@ -21,6 +21,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://luxai-qtrobot.github.io/FAQ/Autostart/</loc>
+     <lastmod>2020-02-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://luxai-qtrobot.github.io/FAQ/Audio/</loc>
      <lastmod>2020-02-10</lastmod>
      <changefreq>daily</changefreq>
@@ -31,17 +36,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://luxai-qtrobot.github.io/FAQ/Miscellaneous/</loc>
-     <lastmod>2020-02-10</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://luxai-qtrobot.github.io/FAQ/Autostart/</loc>
-     <lastmod>2020-02-10</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://luxai-qtrobot.github.io/FAQ/Motors/</loc>
+     <lastmod>2020-02-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://luxai-qtrobot.github.io/FAQ/Miscellaneous/</loc>
      <lastmod>2020-02-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
