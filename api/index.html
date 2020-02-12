@@ -208,18 +208,6 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../quickstart-developer/" title="Developer Manual" class="md-nav__link">
-      Developer Manual
-    </a>
-  </li>
-
-    
-      
-      
-      
-
   
 
 
@@ -389,13 +377,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-4">
       FAQ
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-4">
         FAQ
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -407,32 +395,20 @@
 
 
   <li class="md-nav__item">
+    <a href="../FAQ/Miscellaneous/" title="Miscellaneous" class="md-nav__link">
+      Miscellaneous
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../FAQ/Autostart/" title="Autostart" class="md-nav__link">
       Autostart
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../FAQ/Audio/" title="Audio" class="md-nav__link">
-      Audio
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../FAQ/Network/" title="Network" class="md-nav__link">
-      Network
     </a>
   </li>
 
@@ -455,8 +431,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../FAQ/Miscellaneous/" title="Miscellaneous" class="md-nav__link">
-      Miscellaneous
+    <a href="../FAQ/Network/" title="Network" class="md-nav__link">
+      Network
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ/Audio/" title="Audio" class="md-nav__link">
+      Audio
     </a>
   </li>
 
@@ -688,15 +676,15 @@ accessing them:</p>
 </ol>
 <hr />
 <h3 id="1-naming-convention"><strong>1. Naming convention</strong><a class="headerlink" href="#1-naming-convention" title="Permanent link">&para;</a></h3>
-<p>All the QTRobot ROS interfaces have <mark>'/qt_robot/...'</mark> prefix in front of their names. The word follows the prefix is the name of the main service (e.g. <mark>'/qt_robot/speech/...'</mark>). Each interface may have more sub-services (methods) which come after the main service name. For example:</p>
+<p>All the QTRobot ROS interfaces have <strong>'/qt_robot/...'</strong> prefix in front of their names. The word follows the prefix is the name of the main service (e.g. <strong>'/qt_robot/speech/...'</strong>). Each interface may have more sub-services (methods) which come after the main service name. For example:</p>
 <ul>
-<li><mark>/qt_robot/speech/say</mark>    : implements say() method of QTrobot TTS</li>
-<li><mark>/qt_robot/speech/config</mark> : implements configure() method of QTrobot TTS</li>
+<li><strong>/qt_robot/speech/say</strong>    : implements say() method of QTrobot TTS</li>
+<li><strong>/qt_robot/speech/config</strong> : implements configure() method of QTrobot TTS</li>
 </ul>
-<p>For user’s convenience we have given the same name to the service and subscriber for each QTrobot ROS interface. That means one can access, for example, the speech functionality using ROS service call or publish/subscribe via the same interface name (e.g. <mark>'/qt_robot/speech/say'</mark>). Please notice that some of the complex services (e.g. speech configuration for language, pitch,…) are accessible only via ROS service call.</p>
+<p>For user’s convenience we have given the same name to the service and subscriber for each QTrobot ROS interface. That means one can access, for example, the speech functionality using ROS service call or publish/subscribe via the same interface name (e.g. <strong>'/qt_robot/speech/say'</strong>). Please notice that some of the complex services (e.g. speech configuration for language, pitch,…) are accessible only via ROS service call.</p>
 <hr />
 <h3 id="2-accessing-qtrobot-interface-from-bash"><strong>2. Accessing QTrobot interface from bash</strong><a class="headerlink" href="#2-accessing-qtrobot-interface-from-bash" title="Permanent link">&para;</a></h3>
-<p>You can access each Robot functionality via its publish/subscribe or Service/Client interfaces. For example to use robot <mark>'Speech'</mark> functionality you can try the following:</p>
+<p>You can access each Robot functionality via its publish/subscribe or Service/Client interfaces. For example to use robot <strong>'Speech'</strong> functionality you can try the following:</p>
 <p>Using ROS Publisher
 <div class="codehilite"><pre><span></span>$ rostopic pub /qt_robot/speech/say std_msgs/String <span class="s2">&quot;data: &#39;I am QT&#39;&quot;</span>
 </pre></div></p>
@@ -812,10 +800,10 @@ previous one using ROS Service/Client method from python:</p>
 <h4 id="41-speech-interface"><strong>4.1 Speech Interface</strong><a class="headerlink" href="#41-speech-interface" title="Permanent link">&para;</a></h4>
 <p>This interface implements QTrobot text to speech functionality which support many languages. The supported languages can be different for each robot. following are some standard supported languages:</p>
 <ul>
-<li><mark>en-US</mark> (american english)</li>
-<li><mark>en-GB</mark> (british english)</li>
-<li><mark>fr-FR</mark> (French)</li>
-<li><mark>de-DE</mark> (German)</li>
+<li><strong>en-US</strong> (american english)</li>
+<li><strong>en-GB</strong> (british english)</li>
+<li><strong>fr-FR</strong> (French)</li>
+<li><strong>de-DE</strong> (German)</li>
 </ul>
 <table>
 <thead>
@@ -874,7 +862,7 @@ previous one using ROS Service/Client method from python:</p>
 </div>
 <hr />
 <h4 id="42-audio-interface"><strong>4.2 Audio Interface</strong><a class="headerlink" href="#42-audio-interface" title="Permanent link">&para;</a></h4>
-<p>Play a standard audio file (e.g. wav, mp3). The audio file can be given using its complete name (with the file extension) such as <mark>happy.mp3</mark> or simply without the file extension: <mark>happy</mark>. In the second case, the player first looks for happy.mp3 to play and if it is not found it then tries with happy.wavand so on.</p>
+<p>Play a standard audio file (e.g. wav, mp3). The audio file can be given using its complete name (with the file extension) such as <strong>happy.mp3</strong> or simply without the file extension: <strong>happy</strong>. In the second case, the player first looks for happy.mp3 to play and if it is not found it then tries with happy.wavand so on.</p>
 <table>
 <thead>
 <tr>
@@ -1130,24 +1118,24 @@ previous one using ROS Service/Client method from python:</p>
 <li>
 <p><strong>head</strong></p>
 <ul>
-<li><mark>HeadYaw</mark></li>
-<li><mark>HeadPitch</mark></li>
+<li><strong>HeadYaw</strong></li>
+<li><strong>HeadPitch</strong></li>
 </ul>
 </li>
 <li>
 <p><strong>right_arm</strong></p>
 <ul>
-<li><mark>RightShoulderPitch</mark></li>
-<li><mark>RightShoulderRoll</mark></li>
-<li><mark>RightElbowRoll</mark></li>
+<li><strong>RightShoulderPitch</strong></li>
+<li><strong>RightShoulderRoll</strong></li>
+<li><strong>RightElbowRoll</strong></li>
 </ul>
 </li>
 <li>
 <p><strong>left_arm</strong></p>
 <ul>
-<li><mark>LeftShoulderPitch</mark></li>
-<li><mark>LeftShoulderRoll</mark></li>
-<li><mark>LeftElbowRoll</mark></li>
+<li><strong>LeftShoulderPitch</strong></li>
+<li><strong>LeftShoulderRoll</strong></li>
+<li><strong>LeftElbowRoll</strong></li>
 </ul>
 </li>
 </ul>
@@ -1310,7 +1298,7 @@ previous one using ROS Service/Client method from python:</p>
                   <div class="md-source-date">
                     <small>
                       
-                        Last update: February 7, 2020
+                        Last update: February 12, 2020
                       
                     </small>
                   </div>
@@ -1332,7 +1320,7 @@ previous one using ROS Service/Client method from python:</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../quickstart-developer/" title="Developer Manual" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../user-manual/" title="Quick Start" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1341,19 +1329,19 @@ previous one using ROS Service/Client method from python:</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Developer Manual
+                Quick Start
               </span>
             </div>
           </a>
         
         
-          <a href="../FAQ/Autostart/" title="Autostart" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../FAQ/Miscellaneous/" title="Miscellaneous" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Autostart
+                Miscellaneous
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
