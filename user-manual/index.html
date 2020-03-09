@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/luxai-favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -57,7 +57,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -91,7 +91,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#user-manual" tabindex="1" class="md-skip">
+      <a href="#user-manual" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -100,9 +100,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://luxai-qtrobot.github.io/" title="QTrobot Documentation" class="md-header-nav__button md-logo">
+        <a href="https://luxai-qtrobot.github.io/" title="QTrobot Documentation" aria-label="QTrobot Documentation" class="md-header-nav__button md-logo">
           
-            <img src="../img/logo_luxai_white.png" width="24" height="24">
+            <img alt="logo" src="../img/logo_luxai_white.png" width="24" height="24">
           
         </a>
       </div>
@@ -131,7 +131,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -172,7 +172,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://luxai-qtrobot.github.io/" title="QTrobot Documentation" class="md-nav__button md-logo">
       
-        <img src="../img/logo_luxai_white.png" width="48" height="48">
+        <img alt="logo" src="../img/logo_luxai_white.png" width="48" height="48">
       
     </a>
     QTrobot Documentation
@@ -503,8 +503,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../FAQ/Miscellaneous/" title="Miscellaneous" class="md-nav__link">
-      Miscellaneous
+    <a href="../FAQ/Audio/" title="Audio" class="md-nav__link">
+      Audio
     </a>
   </li>
 
@@ -551,8 +551,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../FAQ/Audio/" title="Audio" class="md-nav__link">
-      Audio
+    <a href="../FAQ/Miscellaneous/" title="Miscellaneous" class="md-nav__link">
+      Miscellaneous
     </a>
   </li>
 
@@ -866,10 +866,10 @@
               
                 
                 
-                <h1 id="user-manual"><strong>User Manual</strong><a class="headerlink" href="#user-manual" title="Permanent link">&para;</a></h1>
+                <h1 id="user-manual"><strong>User Manual</strong></h1>
 <p>In the following sections you will find user manual of the QTrobot.</p>
 <hr />
-<h2 id="1-qtrobot-power"><strong>1. QTrobot Power</strong><a class="headerlink" href="#1-qtrobot-power" title="Permanent link">&para;</a></h2>
+<h2 id="1-qtrobot-power"><strong>1. QTrobot Power</strong></h2>
 <p>QTrobot power button has three color states, each indicating the robot current power state:</p>
 <ul>
 <li>LED OFF: robot is disconnected from its main power supply.</li>
@@ -877,22 +877,22 @@
 <li>LED Fully ON: robot is running.</li>
 </ul>
 <p><img alt="Power Button Indicator" src="../img/power_btn_indicator.png" /></p>
-<h3 id="power-on"><strong><em>Power ON</em></strong><a class="headerlink" href="#power-on" title="Permanent link">&para;</a></h3>
+<h3 id="power-on"><strong><em>Power ON</em></strong></h3>
 <p>To power the robot on, simply connect the robot's power supply<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.This triggers the power on process and your robot becomes ready less than a minute. After powering on, you can see the robot face is on and the motors are in their home position. If the robot is off and it is connected to the power supply<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> simply
 push the power button to turn on the robot.</p>
-<h3 id="power-off"><strong><em>Power OFF</em></strong><a class="headerlink" href="#power-off" title="Permanent link">&para;</a></h3>
+<h3 id="power-off"><strong><em>Power OFF</em></strong></h3>
 <p>To power off the robot, simply press the power button when it is on. You can see that the robot motors move to the parking position and the robot display turns off in less than one minute. The Dim light at the power button indicates that it is safe to disconnect the power supply.</p>
 <div class="admonition danger">
 <p class="admonition-title">Warning</p>
 <p><strong><em>Avoid turning off the robot by cutting the power supply. This may damage your product.</em></strong></p>
 </div>
-<h4 id="methods-to-power-off-the-qtrobot">Methods to power off the QTrobot<a class="headerlink" href="#methods-to-power-off-the-qtrobot" title="Permanent link">&para;</a></h4>
+<h4 id="methods-to-power-off-the-qtrobot">Methods to power off the QTrobot</h4>
 <p>Apart from using the power button, you can power off the robot in different ways:</p>
 <div class="admonition tip">
 <p class="admonition-title">Powering off using the robot control panel</p>
 <ul>
 <li>Connect to robot WIFI hotspot</li>
-<li>Access the control panel using <code class="codehilite"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">qtrrobot</span></code> or <code class="codehilite"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">100</span><span class="p">.</span><span class="mi">1</span></code> in your web browser</li>
+<li>Access the control panel using <code class="codehilite"><span class="c">http://qtrrobot</span></code> or <code class="codehilite"><span class="c">http://192.168.100.1</span></code> in your web browser</li>
 <li>Click on "Power off" button</li>
 </ul>
 </div>
@@ -910,113 +910,113 @@ push the power button to turn on the robot.</p>
 <li>Connect to robot WIFI hotspot</li>
 <li>Login into robot via SSH using provided credentials</li>
 <li>Power the robot off
-<div class="codehilite"><pre><span></span>ssh qtrobot@qtrobot
+<div class="codehilite"><pre><span></span><code>ssh qtrobot@qtrobot
 sudo poweroff
-</pre></div></li>
+</code></pre></div></li>
 </ul>
 </div>
-<h2 id="2-connecting-to-qtrobot-wifi-hotspot"><strong>2. Connecting to QTrobot WiFi Hotspot</strong><a class="headerlink" href="#2-connecting-to-qtrobot-wifi-hotspot" title="Permanent link">&para;</a></h2>
+<h2 id="2-connecting-to-qtrobot-wifi-hotspot"><strong>2. Connecting to QTrobot WiFi Hotspot</strong></h2>
 <p>QTrobot comes with integrated WIFI interfaces. One of them provide the hotspot to remotely connect to the robot and the other one can be used to connect the robot to public WIF and internet. From your device/PC/tablet, just look for the robot WIFI hotspot SSID and connect to it. The hotspot name is your robot name (e.g. QT100).</p>
-<h2 id="3-connect-to-qtrobot-via-ssh"><strong>3. Connect to QTrobot via ssh</strong><a class="headerlink" href="#3-connect-to-qtrobot-via-ssh" title="Permanent link">&para;</a></h2>
+<h2 id="3-connect-to-qtrobot-via-ssh"><strong>3. Connect to QTrobot via ssh</strong></h2>
 <p>Your QTrobot comes with two integrated computers both running Ubuntu 16.04 LTS operating system.</p>
 <ul>
 <li><em>QTROBOT (ARM Cortex-A53)</em>: This is the embedded computer of QTrobot which runs the robot main software such as motors controller, gestures, emotions and implement most of the ROS interfaces. The ROS server is running on this machine.</li>
 <li><em>QTPC (Intel NUC i5)</em>: This is the high-performance computer of the robot which allows you to develop and run your high computational codes. QTPC is connected to QTROBOT via LAN and communicates to all robot modules using ROS. This machine also implements some of the QTrobot ROS interfaces such as 3D camera images.</li>
 </ul>
-<h3 id="accessing-qtrobot-via-ssh"><strong><em>Accessing QTROBOT via SSH</em></strong><a class="headerlink" href="#accessing-qtrobot-via-ssh" title="Permanent link">&para;</a></h3>
+<h3 id="accessing-qtrobot-via-ssh"><strong><em>Accessing QTROBOT via SSH</em></strong></h3>
 <div class="admonition tip">
-<p>After connecting to the robot WIFI hotspot, open a terminal from your PC and SSH to the robot using 'qtrobot' as hostname or using IP <code class="codehilite"><span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">100</span><span class="p">.</span><span class="mi">1</span></code><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.
-<div class="codehilite"><pre><span></span>ssh qtrobot@qtrobot
+<p>After connecting to the robot WIFI hotspot, open a terminal from your PC and SSH to the robot using 'qtrobot' as hostname or using IP <code class="codehilite"><span class="err">192.168.100.1</span></code><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.
+<div class="codehilite"><pre><span></span><code>ssh qtrobot@qtrobot
 qtrobot@qt password:*******  
-</pre></div></p>
+</code></pre></div></p>
 </div>
-<h3 id="accessing-qtpc-via-ssh"><strong><em>Accessing QTPC via SSH</em></strong><a class="headerlink" href="#accessing-qtpc-via-ssh" title="Permanent link">&para;</a></h3>
+<h3 id="accessing-qtpc-via-ssh"><strong><em>Accessing QTPC via SSH</em></strong></h3>
 <div class="admonition tip">
 <p>There are two ways to SSH into QTPC:</p>
 <ul>
 <li>Via QTROBOT: after connecting to robot WIFI hotspot, first SSH to QTRBOT, then from QTROBOT terminal SSH into QTPC.
-  <div class="codehilite"><pre><span></span>ssh qtrobot@qtrobot
+  <div class="codehilite"><pre><span></span><code>ssh qtrobot@qtrobot
 qtrobot@qt password:*******
 
 ssh qtpc  
-</pre></div></li>
-<li>Directly SSH to QTPC: after connecting to robot WIFI hotspot, open a terminal from your PC and ssh to QTPC using <code class="codehilite"><span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">100</span><span class="p">.</span><span class="mi">2</span></code>
-  <div class="codehilite"><pre><span></span>ssh qtrobot@192.168.100.2
+</code></pre></div></li>
+<li>Directly SSH to QTPC: after connecting to robot WIFI hotspot, open a terminal from your PC and ssh to QTPC using <code class="codehilite"><span class="err">192.168.100.2</span></code>
+  <div class="codehilite"><pre><span></span><code>ssh qtrobot@192.168.100.2
 qtrobot@qt password:*******
-</pre></div></li>
+</code></pre></div></li>
 </ul>
 </div>
-<h2 id="4-accessing-the-control-panel"><strong>4. Accessing The Control Panel</strong><a class="headerlink" href="#4-accessing-the-control-panel" title="Permanent link">&para;</a></h2>
+<h2 id="4-accessing-the-control-panel"><strong>4. Accessing The Control Panel</strong></h2>
 <p>QTrobot has two web-based control panels one for QTROBOT and the other for QTPCP. These panels facilitate robot configuration such as connecting to the internet or to enable/disable robot startup scripts (see section <a href="#7-robot-autostart-scripts">Robot Autostart Scripts</a>). You can connect separately to each control panel using their corresponding IPs.
 To connect to the QTROBOT or QTPC web control panel, after connecting to the robot WIFI hotspot:</p>
 <ul>
-<li>For QTROBOT, open a browser and type <code class="codehilite"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">100</span><span class="p">.</span><span class="mi">1</span><span class="p">:</span><span class="mi">8080</span></code> or <code class="codehilite"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">qtrobot</span></code></li>
-<li>For QTPC, open a browser and type <code class="codehilite"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">100</span><span class="p">.</span><span class="mi">2</span><span class="p">:</span><span class="mi">8080</span></code></li>
+<li>For QTROBOT, open a browser and type <code class="codehilite"><span class="c">http://192.168.100.1:8080</span></code> or <code class="codehilite"><span class="c">http://qtrobot</span></code></li>
+<li>For QTPC, open a browser and type <code class="codehilite"><span class="c">http://192.168.100.2:8080</span></code></li>
 <li>Log in to the panel using the QTrobot's username and password provided to you.</li>
 </ul>
-<h2 id="5-connecting-to-a-home-network-and-internet"><strong>5. Connecting to a Home Network and Internet</strong><a class="headerlink" href="#5-connecting-to-a-home-network-and-internet" title="Permanent link">&para;</a></h2>
+<h2 id="5-connecting-to-a-home-network-and-internet"><strong>5. Connecting to a Home Network and Internet</strong></h2>
 <p>You can connect the robot to your home network and internet using the WIFI from QTPC either via terminal or using the control panel of QTPC</p>
 <div class="admonition danger">
 <p class="admonition-title">Warning</p>
 <p><strong><em>Do not use the QTROBOT WIFI to connect to a network. Instead use WIFI from QTPC!</em></strong></p>
 </div>
-<h3 id="connecting-to-the-internet-from-terminal"><strong><em>Connecting to the Internet from Terminal</em></strong><a class="headerlink" href="#connecting-to-the-internet-from-terminal" title="Permanent link">&para;</a></h3>
+<h3 id="connecting-to-the-internet-from-terminal"><strong><em>Connecting to the Internet from Terminal</em></strong></h3>
 <p>Open a terminal and SSH to QTPC and use 'nmtui' tool:
-<div class="codehilite"><pre><span></span>qtrobot@qtpc:~$ sudo nmtui
-</pre></div>
+<div class="codehilite"><pre><span></span><code>qtrobot@qtpc:~$ sudo nmtui
+</code></pre></div>
 <img alt="Nmtui" src="../img/nmtui.png" /></p>
-<h3 id="connecting-to-the-internet-from-control-panel"><strong><em>Connecting to the Internet from Control panel</em></strong><a class="headerlink" href="#connecting-to-the-internet-from-control-panel" title="Permanent link">&para;</a></h3>
+<h3 id="connecting-to-the-internet-from-control-panel"><strong><em>Connecting to the Internet from Control panel</em></strong></h3>
 <p>Connect to the QTPC control panel and navigate to "Configure WIFI". Then simply follow the instructions.</p>
 <p><img alt="Nmtui" src="../img/qtrobot_wifi_settings.png" /></p>
-<h2 id="6-robot-autostart-scripts"><strong>6. Robot Autostart scripts</strong><a class="headerlink" href="#6-robot-autostart-scripts" title="Permanent link">&para;</a></h2>
+<h2 id="6-robot-autostart-scripts"><strong>6. Robot Autostart scripts</strong></h2>
 <div class="admonition danger">
 <p class="admonition-title">Warning</p>
 <p><strong><em>Assure that you completely understood the purpose of each script and you are aware of what you are doing</em></strong></p>
 </div>
 <p>Autostart scripts are simply some bash scripts which are executed at robot startup time. These scripts prepare robot network, setup ROS environment, launch QTrobot motor and other controllers, setup log files and etc.  </p>
-<h3 id="where-are-they-located">Where are they located?<a class="headerlink" href="#where-are-they-located" title="Permanent link">&para;</a></h3>
+<h3 id="where-are-they-located">Where are they located?</h3>
 <p>there are two sets of autostart scripts on QTrobot:
 1. Autostart scripts on <strong>RPI</strong>
 2. Autostart scripts on <strong>NUC</strong>  </p>
-<p>Both sets are located under <code class="codehilite"><span class="o">~/</span><span class="n">robot</span><span class="o">/</span><span class="n">autostart</span></code> folder.</p>
-<h3 id="how-they-are-executed-at-startup-time">How they are executed at startup time?<a class="headerlink" href="#how-they-are-executed-at-startup-time" title="Permanent link">&para;</a></h3>
-<p>The scripts are run by linux <a href="https://en.wikipedia.org/wiki/Cron">Cron</a> job scheduler. In fact, a specific corn job is configured to run <code class="codehilite"><span class="n">autostart_screens</span><span class="p">.</span><span class="n">sh</span></code> script at linux boot. The other scripts are launched by <code class="codehilite"><span class="n">autostart_screens</span><span class="p">.</span><span class="n">sh</span></code> and their output are redirected to the corresponding log files.<br />
+<p>Both sets are located under <code class="codehilite"><span class="err">~/robot/autostart</span></code> folder.</p>
+<h3 id="how-they-are-executed-at-startup-time">How they are executed at startup time?</h3>
+<p>The scripts are run by linux <a href="https://en.wikipedia.org/wiki/Cron">Cron</a> job scheduler. In fact, a specific corn job is configured to run <code class="codehilite"><span class="err">autostart_screens.sh</span></code> script at linux boot. The other scripts are launched by <code class="codehilite"><span class="err">autostart_screens.sh</span></code> and their output are redirected to the corresponding log files.<br />
 <img alt="image" src="https://user-images.githubusercontent.com/4293456/70848218-68b2b700-1e6e-11ea-830d-1d7dff2f6d57.png" /></p>
-<p>To add your own script (e.g. <code class="codehilite"><span class="n">start_my_script</span><span class="p">.</span><span class="n">sh</span></code>) you can simply add the following line to the <code class="codehilite"><span class="n">autostart_screens</span><span class="p">.</span><span class="n">sh</span></code>:</p>
-<div class="codehilite"><pre><span></span>{
+<p>To add your own script (e.g. <code class="codehilite"><span class="err">start_my_script.sh</span></code>) you can simply add the following line to the <code class="codehilite"><span class="err">autostart_screens.sh</span></code>:</p>
+<div class="codehilite"><pre><span></span><code>{
 wait_for_network        
 run_script &quot;start_qtroutes.sh&quot;
 ...
 ...
 run_script &quot;start_my_script.sh&quot;
 } <span class="err">&amp;</span>&gt;&gt; <span class="cp">${</span><span class="n">LOG_FILE</span><span class="cp">}</span>
-</pre></div>
+</code></pre></div>
 
-<h3 id="how-can-i-access-them">How can I access them?<a class="headerlink" href="#how-can-i-access-them" title="Permanent link">&para;</a></h3>
+<h3 id="how-can-i-access-them">How can I access them?</h3>
 <p>You can access them via terminal of NUC/RPI or via QTrobot web interface for enable/disable them:</p>
 <ol>
-<li>Web interface on RPI: <code class="codehilite"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">100</span><span class="p">.</span><span class="mi">1</span><span class="p">:</span><span class="mi">8080</span></code></li>
-<li>Web interface on NUC: <code class="codehilite"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">100</span><span class="p">.</span><span class="mi">2</span><span class="p">:</span><span class="mi">8080</span></code></li>
+<li>Web interface on RPI: <code class="codehilite"><span class="c">http://192.168.100.1:8080</span></code></li>
+<li>Web interface on NUC: <code class="codehilite"><span class="c">http://192.168.100.2:8080</span></code></li>
 </ol>
-<h3 id="what-are-the-main-autostart-scripts">What are the main autostart scripts?<a class="headerlink" href="#what-are-the-main-autostart-scripts" title="Permanent link">&para;</a></h3>
+<h3 id="what-are-the-main-autostart-scripts">What are the main autostart scripts?</h3>
 <p>As I explained above, there are some <em>important</em> scripts which prepare the robot network, ROS environment and launch the motor controller and other robot interfaces. All of these scripts are running on RPI and are <strong>necessary</strong> for functionality of QTrobot.  </p>
-<h4 id="here-are-the-main-startup-scripts-on-rpi">Here are the main startup scripts on <em>RPI</em>:<a class="headerlink" href="#here-are-the-main-startup-scripts-on-rpi" title="Permanent link">&para;</a></h4>
+<h4 id="here-are-the-main-startup-scripts-on-rpi">Here are the main startup scripts on <em>RPI</em>:</h4>
 <ul>
-<li><strong><code class="codehilite"><span class="n">start_qt_routes</span><span class="p">.</span><span class="n">sh</span></code></strong>: prepares network routing between RPI and NUC for internet sharing and etc.</li>
-<li><strong><code class="codehilite"><span class="n">start_roscore</span><span class="p">.</span><span class="n">sh</span></code></strong>:  launches <code class="codehilite"><span class="n">roscore</span></code></li>
-<li><strong><code class="codehilite"><span class="n">start_qtpc</span><span class="p">.</span><span class="n">sh</span></code></strong>: power on NUC via wake-on-lan.</li>
-<li><strong><code class="codehilite"><span class="n">start_qt_motor</span><span class="p">.</span><span class="n">sh</span></code></strong>: launch <code class="codehilite"><span class="n">qt_motor</span></code> node including motor and gesture controllers.</li>
-<li><strong><code class="codehilite"><span class="n">start_qt_robot_interface</span><span class="p">.</span><span class="n">sh</span></code></strong>: launch <code class="codehilite"><span class="n">qt_robot_interface</span></code> node which implements QTrobot emotion (face), audio, speech, behavior and other interfaces.
--<strong><code class="codehilite"><span class="n">start_qt_webconfing</span><span class="p">.</span><span class="n">sh</span></code></strong>: launch QTrobot web config interface on RPI</li>
+<li><strong><code class="codehilite"><span class="err">start_qt_routes.sh</span></code></strong>: prepares network routing between RPI and NUC for internet sharing and etc.</li>
+<li><strong><code class="codehilite"><span class="err">start_roscore.sh</span></code></strong>:  launches <code class="codehilite"><span class="err">roscore</span></code></li>
+<li><strong><code class="codehilite"><span class="err">start_qtpc.sh</span></code></strong>: power on NUC via wake-on-lan.</li>
+<li><strong><code class="codehilite"><span class="err">start_qt_motor.sh</span></code></strong>: launch <code class="codehilite"><span class="err">qt_motor</span></code> node including motor and gesture controllers.</li>
+<li><strong><code class="codehilite"><span class="err">start_qt_robot_interface.sh</span></code></strong>: launch <code class="codehilite"><span class="err">qt_robot_interface</span></code> node which implements QTrobot emotion (face), audio, speech, behavior and other interfaces.
+-<strong><code class="codehilite"><span class="err">start_qt_webconfing.sh</span></code></strong>: launch QTrobot web config interface on RPI</li>
 </ul>
-<h4 id="here-are-the-main-startup-scripts-on-nuc">Here are the main startup scripts on <em>NUC</em>:<a class="headerlink" href="#here-are-the-main-startup-scripts-on-nuc" title="Permanent link">&para;</a></h4>
+<h4 id="here-are-the-main-startup-scripts-on-nuc">Here are the main startup scripts on <em>NUC</em>:</h4>
 <p>The NUC pc is most convenient place to develop code and run your own autostart scripts and apps.
 Most of the default scripts are simply running the QTrobot open source demos and examples and can be safely disabled and/or modified. There is nothing especial running by autostart scripts on NUC except:
-- <strong><code class="codehilite"><span class="n">start_qt_nuitrack_app</span><span class="p">.</span><span class="n">sh</span></code></strong>: which run Nuitrack skeleton tracking and camera interfaces.<br />
-- <strong><code class="codehilite"><span class="n">start_qt_webconfing</span><span class="p">.</span><span class="n">sh</span></code></strong>: launch QTrobot web config interface on NUC</p>
-<h3 id="where-are-the-log-files">Where are the log files?<a class="headerlink" href="#where-are-the-log-files" title="Permanent link">&para;</a></h3>
-<p>All programs/ROS nodes which are run by QTrobot autostart scripts redirect their standard output (info/war/error messages) to their corresponding log file. These log files can be found under <code class="codehilite"><span class="o">~/</span><span class="n">robot</span><span class="o">/</span><span class="n">autostart</span><span class="o">/</span><span class="n">logs</span></code> folder.  </p>
-<h2 id="7-working-directly-on-qtpc"><strong>7. Working directly on QTPC</strong><a class="headerlink" href="#7-working-directly-on-qtpc" title="Permanent link">&para;</a></h2>
+- <strong><code class="codehilite"><span class="err">start_qt_nuitrack_app.sh</span></code></strong>: which run Nuitrack skeleton tracking and camera interfaces.<br />
+- <strong><code class="codehilite"><span class="err">start_qt_webconfing.sh</span></code></strong>: launch QTrobot web config interface on NUC</p>
+<h3 id="where-are-the-log-files">Where are the log files?</h3>
+<p>All programs/ROS nodes which are run by QTrobot autostart scripts redirect their standard output (info/war/error messages) to their corresponding log file. These log files can be found under <code class="codehilite"><span class="err">~/robot/autostart/logs</span></code> folder.  </p>
+<h2 id="7-working-directly-on-qtpc"><strong>7. Working directly on QTPC</strong></h2>
 <p>Your robot has a standard Ubuntu-based PC. You can use QTPC in the same way you use a standard desktop. That greatly facilitates and accelerates your development cycle as you have a full-featured desktop directly with your QTrobot. To do that:</p>
 <ul>
 <li>Connect a USB-C extension (or USB-C to HDMI cable) to the USB-C port of QTrobot.</li>
@@ -1028,12 +1028,12 @@ Most of the default scripts are simply running the QTrobot open source demos and
 <p class="admonition-title">Notice</p>
 <p><strong><em>You may need to connect the HDMI cable before powering up the robot to make QTPC aware of any external display.</em></strong></p>
 </div>
-<h2 id="8-working-on-your-pc"><strong>8. Working on your PC</strong><a class="headerlink" href="#8-working-on-your-pc" title="Permanent link">&para;</a></h2>
+<h2 id="8-working-on-your-pc"><strong>8. Working on your PC</strong></h2>
 <div class="admonition danger">
 <p class="admonition-title">Warning</p>
 <p><strong><em>You don NOT need this installation if you are programming directly on the QTrobot. See previous section <a href="#7-working-directly-on-qtpc">Working directly on QTPC.</a></em></strong></p>
 </div>
-<h3 id="installing-ros">Installing ROS<a class="headerlink" href="#installing-ros" title="Permanent link">&para;</a></h3>
+<h3 id="installing-ros">Installing ROS</h3>
 <p>The following steps guide you through the installation of ROS Kinetic. For the complete installation guide of ROS see <a href="http://wiki.ros.org/kinetic/Installation/Ubuntu">Install ROS</a></p>
 <div class="admonition warning">
 <p class="admonition-title">Notice</p>
@@ -1045,54 +1045,64 @@ Most of the default scripts are simply running the QTrobot open source demos and
 <p>You need to configure your Ubuntu repositories to allow "restricted" "universe" and "multiverse". You can check <a href="https://help.ubuntu.com/community/Repositories/Ubuntu">Ubuntu documentation</a> for doing this.</p>
 <p><em>2. Setup your sources.list</em></p>
 <p>Setup your computer to accept software from packages.ros.org.
-<div class="codehilite"><pre><span></span>sudo sh -c <span class="s1">&#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code>sudo sh -c <span class="s1">&#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
+</code></pre></div>
 <em>3. Set up your keys</em></p>
-<div class="codehilite"><pre><span></span>sudo apt-key adv --keyserver <span class="s1">&#39;hkp://keyserver.ubuntu.com:80&#39;</span> --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-</pre></div>
+<div class="codehilite"><pre><span></span><code>sudo apt-key adv --keyserver <span class="s1">&#39;hkp://keyserver.ubuntu.com:80&#39;</span> --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+</code></pre></div>
 
 <p><em>4. Install</em></p>
 <p>Now you can update and install ros-kinetic-desktop-full
-<div class="codehilite"><pre><span></span>sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get install ros-kinetic-desktop-full
-</pre></div></p>
+<div class="codehilite"><pre><span></span><code>sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get install ros-kinetic-desktop-full
+</code></pre></div></p>
 <p><em>5. Setup Catkin workspace</em></p>
-<p><div class="codehilite"><pre><span></span><span class="nb">source</span> /opt/ros/kinetic/setup.bash
-</pre></div>
-<div class="codehilite"><pre><span></span>mkdir -p ~/catkin_ws/src <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ~/catkin_ws/ <span class="o">&amp;&amp;</span> catkin_make
-</pre></div></p>
+<p><div class="codehilite"><pre><span></span><code><span class="nb">source</span> /opt/ros/kinetic/setup.bash
+</code></pre></div>
+<div class="codehilite"><pre><span></span><code>mkdir -p ~/catkin_ws/src <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ~/catkin_ws/ <span class="o">&amp;&amp;</span> catkin_make
+</code></pre></div></p>
+<p><em>6. Install QTrobot ROS header files</em></p>
+<p>First you need to clone our github <strong><em><a href="https://github.com/luxai-qtrobot/software">Software</a></em></strong> repository. You can do that with this command:</p>
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/luxai-qtrobot/software.git
+</code></pre></div>
+
+<p>After that go in the folder and copy the content of the <strong><em>headers</em></strong> folder to your Catkin <strong><em>devel</em></strong> folder.</p>
+<div class="codehilite"><pre><span></span><code>cp -r headers/* ~/catkin_ws/devel/
+</code></pre></div>
+
+<p>Now you can access all QTrobot ROS services and messages from your PC.</p>
 </div>
-<h3 id="configure-ros-environment-for-qtrobot">Configure ROS environment for QTrobot<a class="headerlink" href="#configure-ros-environment-for-qtrobot" title="Permanent link">&para;</a></h3>
+<h3 id="configure-ros-environment-for-qtrobot">Configure ROS environment for QTrobot</h3>
 <p>The following steps guide you through the configuration of your ROS environment for QTrobot.</p>
 <div class="admonition tip">
 <p class="admonition-title">ROS environment for QTrobot</p>
-<p>You need to edit your <code class="codehilite"><span class="o">~/</span><span class="p">.</span><span class="n">bash_aliases</span></code> and add following lines. Change <mark>ROS_IP</mark> to your PC IP.</p>
-<div class="codehilite"><pre><span></span><span class="nb">source</span> /opt/ros/kinetic/setup.bash
+<p>You need to edit your <code class="codehilite"><span class="err">~/.bash_aliases</span></code> and add following lines. Change <mark>ROS_IP</mark> to your PC IP.</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">source</span> /opt/ros/kinetic/setup.bash
 <span class="nb">source</span> ~/catkin_ws/devel/setup.bash
 
 <span class="c1">## QTrobot</span>
 <span class="nb">export</span> <span class="nv">ROS_IP</span><span class="o">=</span>&lt;your PC IP address&gt;
 <span class="nb">export</span> <span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://192.168.100.1:11311    
-</pre></div>
+</code></pre></div>
 
 <p><em>Which is my IP address ?</em>
 To get your IP address, First you need to connect to the QTrobot WiFi hotspot. Then open a terminal on your PC and run the following command:</p>
-<div class="codehilite"><pre><span></span>ifconfig
-</pre></div>
+<div class="codehilite"><pre><span></span><code>ifconfig
+</code></pre></div>
 
 <p>To apply this configuration you can open a new terminal or run this command:</p>
-<div class="codehilite"><pre><span></span><span class="nb">source</span> ~/.bash_aliases
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nb">source</span> ~/.bash_aliases
+</code></pre></div>
 
 </div>
-<h3 id="check-your-ros-setup">Check your ROS setup<a class="headerlink" href="#check-your-ros-setup" title="Permanent link">&para;</a></h3>
+<h3 id="check-your-ros-setup">Check your ROS setup</h3>
 <p>Last step is to connect to the QTrobot WiFi hotspot and test your ROS environment.</p>
 <div class="admonition tip">
 <p class="admonition-title">Test</p>
 <p>To test your environment you can list all rostopics from QTrobot. You can do that with running this command.
-<div class="codehilite"><pre><span></span>rostopic list
-</pre></div>
+<div class="codehilite"><pre><span></span><code>rostopic list
+</code></pre></div>
 If everything is working you should see output similar to this one.</p>
-<div class="codehilite"><pre><span></span>/rosout    
+<div class="codehilite"><pre><span></span><code>/rosout    
 /qt_robot/audio/play
 /qt_robot/behavior/talkAudio
 /qt_robot/emotion/show
@@ -1100,11 +1110,11 @@ If everything is working you should see output similar to this one.</p>
 /qt_robot/head_position/command
 /qt_robot/joints/state
 ...
-</pre></div>
+</code></pre></div>
 
 <p>Now you can start having fun.</p>
 </div>
-<h2 id="9-qtrobot-ros-api"><strong>9. QTrobot ROS API</strong><a class="headerlink" href="#9-qtrobot-ros-api" title="Permanent link">&para;</a></h2>
+<h2 id="9-qtrobot-ros-api"><strong>9. QTrobot ROS API</strong></h2>
 <p>The QTrobot (LuxAI) interface aims to facilitate accessing basic robot functionalities leveraging a set of user-friendly ROS interfaces. Each robot’s functionality can be accessed in blocking and non-blocking mode using ROS publish/subscribe and Service/Client interfaces.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -1114,21 +1124,21 @@ If everything is working you should see output similar to this one.</p>
 <p class="admonition-title">Demos &amp; Examples</p>
 <p>Please check our <a href="../demos">Demos</a> and <a href="../examples">Examples</a> to check how to use and implement QTrobot interfaces</p>
 </div>
-<h2 id="10-calling-qtrobot-apis"><strong>10. Calling QTrobot APIs</strong><a class="headerlink" href="#10-calling-qtrobot-apis" title="Permanent link">&para;</a></h2>
+<h2 id="10-calling-qtrobot-apis"><strong>10. Calling QTrobot APIs</strong></h2>
 <p>You can access each robot's functionality via its publish/subscribe or service/client interfaces. For example, to use the robot 'Speech' functionality from terminal using ROS publisher, you can try:</p>
-<p><div class="codehilite"><pre><span></span>rostopic pub /qt_robot/speech/say std_msgs/String <span class="s2">&quot;data: &#39;Hello!&#39;&quot;</span>
-</pre></div>
+<p><div class="codehilite"><pre><span></span><code>rostopic pub /qt_robot/speech/say std_msgs/String <span class="s2">&quot;data: &#39;Hello!&#39;&quot;</span>
+</code></pre></div>
 or by using ROS service call:</p>
-<p><div class="codehilite"><pre><span></span>rosservice call /qt_robot/speech/say <span class="s2">&quot;message: &#39;Hello!&#39;&quot;</span>
-</pre></div>
+<p><div class="codehilite"><pre><span></span><code>rosservice call /qt_robot/speech/say <span class="s2">&quot;message: &#39;Hello!&#39;&quot;</span>
+</code></pre></div>
 or from a python script:</p>
-<div class="codehilite"><pre><span></span>import rospy
+<div class="codehilite"><pre><span></span><code>import rospy
 from std_msgs.msg import String
 <span class="c1"># create a publisher</span>
 <span class="nv">pub</span> <span class="o">=</span> rospy.Publisher<span class="o">(</span><span class="s1">&#39;/qt_robot/speech/say&#39;</span>, String, <span class="nv">queue_size</span><span class="o">=</span><span class="m">10</span><span class="o">)</span>
 <span class="c1"># publish a text message to TTS (non-blocking)</span>
 pub.publish<span class="o">(</span><span class="s2">&quot;Hello! I am QT!&quot;</span><span class="o">)</span>
-</pre></div>
+</code></pre></div>
 
 <div class="footnote">
 <hr />
@@ -1153,7 +1163,7 @@ pub.publish<span class="o">(</span><span class="s2">&quot;Hello! I am QT!&quot;<
                   <div class="md-source-date">
                     <small>
                       
-                        Last update: February 12, 2020
+                        Last update: March 9, 2020
                       
                     </small>
                   </div>
@@ -1169,17 +1179,50 @@ pub.publish<span class="o">(</span><span class="s2">&quot;Hello! I am QT!&quot;<
         </div>
       </main>
       
-        
-<footer class="md-footer">
+        <!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Application footer -->
+<footer id="footer" class="md-footer">
+
+  <!-- Link to previous and/or next page -->
   
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
+
+        <!-- Link to previous page -->
         
-          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href=".."
+              title="Home"
+              class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+              rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              <i class="md-icon md-icon--arrow-back
+                    md-footer-nav__button"></i>
             </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
@@ -1189,9 +1232,15 @@ pub.publish<span class="o">(</span><span class="s2">&quot;Hello! I am QT!&quot;<
             </div>
           </a>
         
+
+        <!-- Link to next page -->
         
-          <a href="../api/" title="API Reference" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+          <a href="../api/"
+              title="API Reference"
+              class="md-flex md-footer-nav__link md-footer-nav__link--next"
+              rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
@@ -1200,40 +1249,41 @@ pub.publish<span class="o">(</span><span class="s2">&quot;Hello! I am QT!&quot;<
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+              <i class="md-icon md-icon--arrow-forward
+                    md-footer-nav__button"></i>
             </div>
           </a>
         
       </nav>
     </div>
   
+
+  <!-- Further information -->
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
+      <!-- Copyright and theme information -->
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2020 LuxAI S.A.
+            &copy; Copyright &copy; 2020 LuxAI S.A.
           </div>
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
       </div>
+
+      <!-- Social links -->
       
   <div class="md-footer-social">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/luxai-qtrobot" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/luxai-qtrobot" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://twitter.com/qtrobot" class="md-footer-social__link fa fa-twitter"></a>
+      <a href="https://twitter.com/qtrobot" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
     
-      <a href="https://www.linkedin.com/company/luxai/" class="md-footer-social__link fa fa-linkedin"></a>
+      <a href="https://www.linkedin.com/company/luxai/" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
     
-      <a href="https://www.facebook.com/luxAI/" class="md-footer-social__link fa fa-facebook"></a>
+      <a href="https://www.facebook.com/luxAI/" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
     
-      <a href="https://www.youtube.com/channel/UCAY0H0HaqQL1GE7lO_iSpbg" class="md-footer-social__link fa fa-youtube"></a>
+      <a href="https://www.youtube.com/channel/UCAY0H0HaqQL1GE7lO_iSpbg" target="_blank" rel="noopener" title="youtube" class="md-footer-social__link fa fa-youtube"></a>
     
   </div>
 
@@ -1243,9 +1293,9 @@ pub.publish<span class="o">(</span><span class="s2">&quot;Hello! I am QT!&quot;<
       
     </div>
     
-      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
       
         <script src="../javascripts/extra.js"></script>
       

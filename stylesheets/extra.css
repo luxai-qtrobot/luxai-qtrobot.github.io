@@ -69,7 +69,35 @@ footer {
 	background: linear-gradient(180deg, rgba(175,174,214,1) 0%, rgba(104,181,228,1) 100%);
 }
 
+#footer {
+  background: #232F3E;
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+}
+
 .md-footer-nav,
 .md-footer-meta {
     background: transparent;
+}
+
+@media (max-width: 768px) {
+	.wrapper {
+	  grid-template-columns: 100% !important;
+	  grid-gap: 10px !important;
+	}
+	.card {
+	  width: 100% !important;
+	}
+	.md-nav__title {
+	    background: linear-gradient(180deg, rgba(175,174,214,1) 0%, rgba(104,181,228,1) 100%);
+	}
 }
