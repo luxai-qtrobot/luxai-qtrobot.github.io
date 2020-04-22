@@ -13,7 +13,7 @@
         <meta name="description" content="Here you can find all documents about QTrobot.">
       
       
-        <link rel="canonical" href="https://luxai-qtrobot.github.io/examples/qt_motors_gesture/">
+        <link rel="canonical" href="https://luxai-qtrobot.github.io/examples/qt_motors_moveit/">
       
       
         <meta name="author" content="QTrobot">
@@ -42,7 +42,7 @@
     
     
       
-        <title>QTrobot Motors gesture - QTrobot Documentation</title>
+        <title>Controlling QTrobot arms using MoveIt - QTrobot Documentation</title>
       
     
     
@@ -91,7 +91,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#qtrobot-motors-gesture" tabindex="0" class="md-skip">
+      <a href="#controlling-qtrobot-arms-using-moveit" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -117,7 +117,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                QTrobot Motors gesture
+                Controlling QTrobot arms using MoveIt
               
             </span>
           
@@ -353,6 +353,76 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparation-and-requirements" class="md-nav__link">
+    Preparation and requirements
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qtrobot-setup" class="md-nav__link">
+    QTrobot setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-machine-setup-eg-qtpc" class="md-nav__link">
+    Your machine setup (e.g. QTPC)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-and-build-the-motors_moveit" class="md-nav__link">
+    clone and build the motors_moveit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-run-the-examples" class="md-nav__link">
+    How to run the examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drawing-rectangle" class="md-nav__link">
+    Drawing rectangle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawing-spiral" class="md-nav__link">
+    Drawing spiral
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -364,51 +434,93 @@
               
                 
                 
-                <h1 id="qtrobot-motors-gesture">QTrobot Motors gesture</h1>
+                <h1 id="controlling-qtrobot-arms-using-moveit">Controlling QTrobot arms using MoveIt</h1>
 <div class="admonition question">
 <p>Get the full code in our <a href="https://github.com/luxai-qtrobot/tutorials/tree/master/examples">github tutorial repository.</a></p>
 </div>
-<div class="admonition abstract">
-<p class="admonition-title">Code</p>
-<div class="codehilite"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
-
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd"> Copyright (C) 2018 LuxAI S.A</span>
-<span class="sd"> Authors: Ali Paikan</span>
-<span class="sd"> CopyPolicy: Released under the terms of the LGPLv2.1 or later, see LGPL.TXT</span>
-<span class="sd">&#39;&#39;&#39;</span>
-
-<span class="kn">import</span> <span class="nn">rospy</span>
-<span class="kn">from</span> <span class="nn">qt_gesture_controller.srv</span> <span class="kn">import</span> <span class="o">*</span>
-
-
-<span class="k">def</span> <span class="nf">print_help</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;QTrobot gesture player example&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Usage:&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;      qt_motors_gesture  &lt;name&gt;         play a gesture given by its &lt;name&gt;&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-
-
-<span class="c1"># main</span>
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-
-    <span class="c1"># check the params</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">print_help</span><span class="p">()</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="c1"># call the relevant service</span>
-    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;qt_motors_gesture&#39;</span><span class="p">)</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">gesturePlay</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span><span class="s1">&#39;/qt_robot/gesture/play&#39;</span><span class="p">,</span> <span class="n">gesture_play</span><span class="p">)</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="n">gesturePlay</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mf">1.0</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">res</span><span class="o">.</span><span class="n">status</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Could not play gesture &#39;</span><span class="si">%s</span><span class="s2">&#39;.&quot;</span> <span class="o">%</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="k">except</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceException</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-        <span class="nb">print</span> <span class="s2">&quot;Service call failed: </span><span class="si">%s</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">e</span>
+<p>This advanced example demonstrates how to use ROS MoveIT to control QTrobot arms. The example draw some shapes (i,e. rectangle and spirals) on the XY plane in robot frame.</p>
+<p><img alt="QTrobot MoveIt" src="../../img/qt_moveit.png" /></p>
+<h2 id="preparation-and-requirements">Preparation and requirements</h2>
+<p>Before running the example, please ensure that following setups of your QTrobot and the machine which you are running the example.</p>
+<h3 id="qtrobot-setup">QTrobot setup</h3>
+<p>By default QTrobot motors interface runs in <em>'normal'</em> mode. in normal mode, the motors control loop and joints state publisher run in low frequency (2-5hz). More importantly the joint position values are in <em>degree</em>. To be able to use MoveIt with QTrobot, you need to configure it to run in <em>'advanced'</em> mode:
+- joints position value is in <em>radian</em>
+- motors main controller loop and joints state publisher runs in 30hz.
+- required interfaces and controller such as <code class="codehilite"><span class="err">robot_state_publisher</span></code> and <code class="codehilite"><span class="err">JointTrajectoryController</span></code> are available</p>
+<p><strong>Update ros-kinetic-qt-motor package if necessary:</strong></p>
+<p>First check and update (if necessary) the <code class="codehilite"><span class="err">ros-kinetic-qt-motor</span></code> package on the QTrobot head machine (QTRP). ssh to the QTRP (e.g. via QTPC or your desktop) and
+<div class="codehilite"><pre><span></span><code><span class="err">qtrobot@QTXXX: apt list ros-kinetic-qt-motor</span>
+<span class="err">ros-kinetic-qt-motor/now 1.2.0-0xenial armhf [installed,local]</span>
+</code></pre></div>
+if the version of <code class="codehilite"><span class="err">ros-kinetic-qt-motor</span></code> is older then <code class="codehilite"><span class="err">1.2.0</span></code>, you NEED to update it:</p>
+<p>make a copy of your current QTrobot configuration (<code class="codehilite"><span class="err">qtrobot-hardware.yaml</span></code>). You need this file to put it back after updating the package:
+<div class="codehilite"><pre><span></span><code><span class="err">qtrobot@QTXXX: cp /opt/ros/kinetic/share/qt_motor/config/qtrobot-hardware.yaml ~/</span>
+</code></pre></div>
+install the latest version of <code class="codehilite"><span class="err">ros-kinetic-qt-motor</span></code>. in my case it is <code class="codehilite"><span class="err">1.2.0-0</span></code>:
+<div class="codehilite"><pre><span></span><code><span class="err">qtrobot@QTXXX: cd ~/robot/packages/dep</span>
+<span class="err">qtrobot@QTXXX: git pull</span>
+<span class="err">qtrobot@QTXXX: sudo apt remove ros-kinetic-qt-motor</span>
+<span class="err">qtrobot@QTXXX: sudo dpkg -i ros-kinetic-qt-motor_1.2.0-0xenial_armhf.deb</span>
+</code></pre></div>
+put back your QTrobot configuration (<code class="codehilite"><span class="err">qtrobot-hardware.yaml</span></code>):
+<div class="codehilite"><pre><span></span><code><span class="err">qtrobot@QTXXX: sudo cp ~/qtrobot-hardware.yaml /opt/ros/kinetic/share/qt_motor/config/</span>
+</code></pre></div></p>
+<p><strong>Change motor launcher autostart script to run in advanced mode:</strong>
+<div class="codehilite"><pre><span></span><code><span class="err">qtrobot@QTXXX: nano ~/robot/autostart/start_qt_motor.sh</span>
+</code></pre></div>
+and change the corresponding line to look like the following and save and exit:
+<div class="codehilite"><pre><span></span><code><span class="err">roslaunch qt_motor qt_motor_advanced.launch</span>
+</code></pre></div></p>
+<p>Reboot the robot to run the advance motor interface.</p>
+<p><strong>Check the advanced mode setup:</strong>
+After rebooting the reboot, you can check (from QTPC, QTRP or your machine) if the motor interface is running in the advanced mode:</p>
+<p>joint state publisher frequency:
+<div class="codehilite"><pre><span></span><code><span class="err">qtrobot@QTXXX: rostopic hz /qt_robot/joints/state</span>
+<span class="err">average rate: 30.041</span>
+<span class="err">    min: 0.029s max: 0.047s std dev: 0.00391s window: 29</span>
+</code></pre></div></p>
+<p>joints value should be in radian:
+<div class="codehilite"><pre><span></span><code><span class="err">qtrobot@QTXXX: rostopic echo /qt_robot/joints/state</span>
+<span class="c">position: [0.015707962851830046, 0.0, -0.6073745663782212, 1.569051024174513, -0.9896016991965904, -0.5689773095185405, -0.3455751785790718, -0.8360127383368947]</span>
+</code></pre></div></p>
+<p>trajectory controller is running:
+<div class="codehilite"><pre><span></span><code><span class="err">qtrobot@QTXXX: rostopic type  /qt_robot/left_arm_controller/follow_joint_trajectory/goal</span>
+<span class="err">control_msgs/FollowJointTrajectoryActionGoal</span>
+</code></pre></div></p>
+<h3 id="your-machine-setup-eg-qtpc">Your machine setup (e.g. QTPC)</h3>
+<p>After checking and updating the QTrobot setup, you can install the iKfast solver plugin for MoveIt on the machine which you plan to run the example:</p>
+<p>clone the QTrobot open software repository:
+<div class="codehilite"><pre><span></span><code><span class="err">cd ~/</span>
+<span class="err">git clone https://github.com/luxai-qtrobot/software.git</span>
+</code></pre></div>
+build the plugins:
+<div class="codehilite"><pre><span></span><code><span class="err">cd ~/catkin_ws</span>
+<span class="err">ln -s ~/software/qtrobot_ikfast_right_arm_plugin/ ./</span>
+<span class="err">ln -s ~/software/qtrobot_ikfast_right_left_plugin/ ./</span>
+<span class="err">cd ../</span>
+<span class="err">catkin_make</span>
+</code></pre></div></p>
+<h2 id="clone-and-build-the-motors_moveit">clone and build the motors_moveit</h2>
+<p>Assuming that you have cloned the <code class="codehilite"><span class="err">tutorial</span></code> repository somewhere on your home folder (e.g. <code class="codehilite"><span class="err">~/tutorials</span></code>):</p>
+<p><div class="codehilite"><pre><span></span><code><span class="err">cd ~/catkin_ws</span>
+<span class="err">ln -s ~/tutorials/examples/motors_moveit ./</span>
+<span class="err">cd ../</span>
+<span class="err">catkin_make</span>
+</code></pre></div>
+or copy the <code class="codehilite"><span class="err">motors_moveit</span></code> to your catkin_ws.  </p>
+<h2 id="how-to-run-the-examples">How to run the examples</h2>
+<p>Launch <code class="codehilite"><span class="err">moveit_qtrobot.launch</span></code> to start move_group planner and rviz:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">roslaunch motors_moveit moveit_qtrobot.launch</span>
 </code></pre></div>
 
-</div>
+<p>wait until rviz shows up, then run one of the following demos:</p>
+<h3 id="drawing-rectangle">Drawing rectangle</h3>
+<div class="codehilite"><pre><span></span><code><span class="err">rosrun motors_moveit draw_rectangle.py joint_states:=/qt_robot/joints/state</span>
+</code></pre></div>
+
+<h3 id="drawing-spiral">Drawing spiral</h3>
+<div class="codehilite"><pre><span></span><code><span class="err">rosrun motors_moveit draw_spiral.py joint_states:=/qt_robot/joints/state</span>
+</code></pre></div>
                 
                   
                 

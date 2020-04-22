@@ -13,7 +13,7 @@
         <meta name="description" content="Here you can find all documents about QTrobot.">
       
       
-        <link rel="canonical" href="https://luxai-qtrobot.github.io/examples/qt_motors_gesture/">
+        <link rel="canonical" href="https://luxai-qtrobot.github.io/examples/qt_motors_custom_controller/">
       
       
         <meta name="author" content="QTrobot">
@@ -42,7 +42,7 @@
     
     
       
-        <title>QTrobot Motors gesture - QTrobot Documentation</title>
+        <title>QTrobot Motors ROS controller - QTrobot Documentation</title>
       
     
     
@@ -91,7 +91,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#qtrobot-motors-gesture" tabindex="0" class="md-skip">
+      <a href="#qtrobot-motors-ros-controller" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -117,7 +117,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                QTrobot Motors gesture
+                QTrobot Motors ROS controller
               
             </span>
           
@@ -353,6 +353,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-does" class="md-nav__link">
+    What it does?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilation-and-build" class="md-nav__link">
+    Compilation and build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-and-launching" class="md-nav__link">
+    Configuration and launching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#re-launch-qt_motor-node" class="md-nav__link">
+    Re-launch qt_motor node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -364,51 +408,79 @@
               
                 
                 
-                <h1 id="qtrobot-motors-gesture">QTrobot Motors gesture</h1>
+                <h1 id="qtrobot-motors-ros-controller">QTrobot Motors ROS controller</h1>
 <div class="admonition question">
 <p>Get the full code in our <a href="https://github.com/luxai-qtrobot/tutorials/tree/master/examples">github tutorial repository.</a></p>
 </div>
-<div class="admonition abstract">
-<p class="admonition-title">Code</p>
-<div class="codehilite"><pre><span></span><code><span class="ch">#!/usr/bin/env python</span>
-
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd"> Copyright (C) 2018 LuxAI S.A</span>
-<span class="sd"> Authors: Ali Paikan</span>
-<span class="sd"> CopyPolicy: Released under the terms of the LGPLv2.1 or later, see LGPL.TXT</span>
-<span class="sd">&#39;&#39;&#39;</span>
-
-<span class="kn">import</span> <span class="nn">rospy</span>
-<span class="kn">from</span> <span class="nn">qt_gesture_controller.srv</span> <span class="kn">import</span> <span class="o">*</span>
-
-
-<span class="k">def</span> <span class="nf">print_help</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;QTrobot gesture player example&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Usage:&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;      qt_motors_gesture  &lt;name&gt;         play a gesture given by its &lt;name&gt;&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-
-
-<span class="c1"># main</span>
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-
-    <span class="c1"># check the params</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">print_help</span><span class="p">()</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="c1"># call the relevant service</span>
-    <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;qt_motors_gesture&#39;</span><span class="p">)</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">gesturePlay</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span><span class="s1">&#39;/qt_robot/gesture/play&#39;</span><span class="p">,</span> <span class="n">gesture_play</span><span class="p">)</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="n">gesturePlay</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mf">1.0</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">res</span><span class="o">.</span><span class="n">status</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Could not play gesture &#39;</span><span class="si">%s</span><span class="s2">&#39;.&quot;</span> <span class="o">%</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="k">except</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceException</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-        <span class="nb">print</span> <span class="s2">&quot;Service call failed: </span><span class="si">%s</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">e</span>
+<p>This example shows how to write a new ROS controller for QTrobot. Before getting into that, make sure you know and understand what is <a href="http://wiki.ros.org/ros_control">ROS Conrol</a>.</p>
+<h2 id="what-it-does">What it does?</h2>
+<p>this controller simply play a predefined trajectory directly by commanding the QTrobot motors at hardware level.  You can use it as a simple template to implement more sophisticate controllers.  </p>
+<h2 id="compilation-and-build">Compilation and build</h2>
+<ul>
+<li>
+<p>copy <code class="codehilite"><span class="err">motors_custom_controller</span></code> to the <code class="codehilite"><span class="err">~/catckin_ws</span></code>on the RPI of QTrobot</p>
+</li>
+<li>
+<p>build the example code:
+<div class="codehilite"><pre><span></span><code><span class="err">cd ~/catckin_ws</span>
+<span class="err">catkin_make --pkg motors_custom_controller</span>
+</code></pre></div></p>
+</li>
+</ul>
+<h2 id="configuration-and-launching">Configuration and launching</h2>
+<ul>
+<li>modify the qt_motor config file to define your new controller. to do that open <code class="codehilite"><span class="err">/opt/ros/kinetic/share/qt_motor/config/qtrobot-controller.yaml</span></code> file and add the following lines to the end of the file.
+<div class="codehilite"><pre><span></span><code><span class="err">  custom:</span>
+<span class="err">    type: motors_custom_controller/QTCustomController</span>
+<span class="err">    myparam: bar</span>
+</code></pre></div></li>
+<li>modify qt_motor launch file to load and run your controller. to do that, open <code class="codehilite"><span class="err">/opt/ros/kinetic/share/qt_motor/launch/qt_motor.launch</span></code> and add <code class="codehilite"><span class="err">/qt_robot/custom</span></code> controller to <code class="codehilite"><span class="err">controller_manager</span></code> node. it should look like this:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="err">&lt;!-- load the controllers --&gt;</span>
+<span class="err"> &lt;node pkg=&quot;controller_manager&quot; name=&quot;controller&quot; type=&quot;spawner&quot; launch-prefix=&quot;bash -c &#39;sleep 15; $0 $@&#39; &quot; respawn=&quot;false&quot;</span>
+<span class="err">       output=&quot;screen&quot; clear_params=&quot;true&quot;  args=&quot;/qt_robot/head_position</span>
+<span class="err">                             /qt_robot/right_arm_position</span>
+<span class="err">                             /qt_robot/left_arm_position</span>
+<span class="err">                             /qt_robot/joints_state</span>
+<span class="err">                             /qt_robot/motors</span>
+<span class="err">                             /qt_robot/gesture</span>
+<span class="err">                             /qt_robot/custom&quot;/&gt;</span>
 </code></pre></div>
 
-</div>
+<h2 id="re-launch-qt_motor-node">Re-launch qt_motor node</h2>
+<p>you can simply reboot the robot or launch the <code class="codehilite"><span class="err">qt_motor</span></code> node from terminal to see its output.
+* stop the running instance:
+<div class="codehilite"><pre><span></span><code><span class="err">ps -aux | grep qt_motor | grep SCREEN</span>
+<span class="err">...</span>
+<span class="err">kill xxx</span>
+</code></pre></div></p>
+<ul>
+<li>launch <code class="codehilite"><span class="err">qt_motor</span></code> node
+<div class="codehilite"><pre><span></span><code><span class="err">roslaunch qt_motor qt_motor.launch</span>
+</code></pre></div></li>
+</ul>
+<p>you should see your controller (<code class="codehilite"><span class="err">QTCustomController</span></code>) running by checking the terminal output:
+<div class="codehilite"><pre><span></span><code><span class="p">...</span><span class="w"></span>
+<span class="o">[</span><span class="n">INFO</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">1576498210.924577</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="n">Controller</span><span class="w"> </span><span class="nl">Spawner</span><span class="p">:</span><span class="w"> </span><span class="n">Loaded</span><span class="w"> </span><span class="nl">controllers</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">qt_robot</span><span class="o">/</span><span class="n">head_position</span><span class="p">,</span><span class="w"> </span><span class="o">/</span><span class="n">qt_robot</span><span class="o">/</span><span class="n">right_arm_position</span><span class="p">,</span><span class="w"> </span><span class="o">/</span><span class="n">qt_robot</span><span class="o">/</span><span class="n">left_arm_position</span><span class="p">,</span><span class="w"> </span><span class="o">/</span><span class="n">qt_robot</span><span class="o">/</span><span class="n">joints_state</span><span class="p">,</span><span class="w"> </span><span class="o">/</span><span class="n">qt_robot</span><span class="o">/</span><span class="n">motors</span><span class="p">,</span><span class="w"> </span><span class="o">/</span><span class="n">qt_robot</span><span class="o">/</span><span class="n">gesture</span><span class="p">,</span><span class="w"> </span><span class="o">/</span><span class="n">qt_robot</span><span class="o">/</span><span class="n">custom</span><span class="w"></span>
+<span class="o">[</span><span class="n"> INFO</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">1576498210.984396566</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="nl">QTMotorsController</span><span class="p">:</span><span class="w"> </span><span class="n">starting</span><span class="w"></span>
+<span class="o">[</span><span class="n"> INFO</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">1576498210.985034385</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="nl">QTGestureController</span><span class="p">:</span><span class="w"> </span><span class="n">starting</span><span class="w"></span>
+<span class="o">[</span><span class="n"> INFO</span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">1576498210.985518609</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="nl">QTCustomController</span><span class="p">:</span><span class="w"> </span><span class="n">starting</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+</code></pre></div></p>
+<h2 id="testing">Testing</h2>
+<p>your custom controller implement a service to Start/Stop it.</p>
+<ul>
+<li>
+<p>to start the trajectory player, open another termianl and
+<div class="codehilite"><pre><span></span><code><span class="err">rosservice call /qt_robot/custom/startstop &quot;command: true&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>to stop the trajectory player:
+<div class="codehilite"><pre><span></span><code><span class="err">rosservice call /qt_robot/custom/startstop &quot;command: false&quot;</span>
+</code></pre></div></p>
+</li>
+</ul>
                 
                   
                 
