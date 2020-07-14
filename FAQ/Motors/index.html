@@ -300,6 +300,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2-gesture-kinematic-diagramqtrobot-urdf" class="md-nav__link">
+    2. Gesture kinematic diagram/QTrobot URDF
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gesture-files" class="md-nav__link">
+    Gesture files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qtrobot-joints-configuration" class="md-nav__link">
+    QTrobot Joints configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qtrobot-urdf" class="md-nav__link">
+    QTRobot URDF
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -403,6 +437,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2-gesture-kinematic-diagramqtrobot-urdf" class="md-nav__link">
+    2. Gesture kinematic diagram/QTrobot URDF
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gesture-files" class="md-nav__link">
+    Gesture files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qtrobot-joints-configuration" class="md-nav__link">
+    QTrobot Joints configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qtrobot-urdf" class="md-nav__link">
+    QTRobot URDF
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -434,6 +502,55 @@ You can always open a new issue/feature request for any interfaces and we do our
 <ul>
 <li><strong>NOTICE</strong> : <em>This does not mean that the QTrobot has self collision awareness when moving its joints!</em></li>
 </ul>
+<h2 id="2-gesture-kinematic-diagramqtrobot-urdf"><strong>2. Gesture kinematic diagram/QTrobot URDF</strong></h2>
+<h3 id="gesture-files">Gesture files</h3>
+<p>the gesture are simply xml files containing robots joint waypoints and their timestamps.
+They are located under <code class="codehilite"><span class="err">~/robot/data/gestures/</span></code> folder in QTRP (head) board.  here is an example:
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot; ?&gt;</span>
+<span class="nt">&lt;gesture&gt;</span>
+    <span class="nt">&lt;name&gt;</span>QT/bye<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;parts&gt;</span>
+        <span class="nt">&lt;part&gt;</span>right_arm<span class="nt">&lt;/part&gt;</span>
+        <span class="nt">&lt;part&gt;</span>left_arm<span class="nt">&lt;/part&gt;</span>
+    <span class="nt">&lt;/parts&gt;</span>
+    <span class="nt">&lt;duration&gt;</span>5.54<span class="nt">&lt;/duration&gt;</span>
+    <span class="nt">&lt;waypoints</span> <span class="na">count=</span><span class="s">&quot;97&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;point</span> <span class="na">time=</span><span class="s">&quot;1558971402671926152&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;LeftElbowRoll&gt;</span>-33.50<span class="nt">&lt;/LeftElbowRoll&gt;</span>
+            <span class="nt">&lt;LeftShoulderPitch&gt;</span>89.90<span class="nt">&lt;/LeftShoulderPitch&gt;</span>
+            <span class="nt">&lt;LeftShoulderRoll&gt;</span>-62.90<span class="nt">&lt;/LeftShoulderRoll&gt;</span>
+            <span class="nt">&lt;RightElbowRoll&gt;</span>-31.90<span class="nt">&lt;/RightElbowRoll&gt;</span>
+            <span class="nt">&lt;RightShoulderPitch&gt;</span>-88.60<span class="nt">&lt;/RightShoulderPitch&gt;</span>
+            <span class="nt">&lt;RightShoulderRoll&gt;</span>-59.30<span class="nt">&lt;/RightShoulderRoll&gt;</span>
+        <span class="nt">&lt;/point&gt;</span>
+        <span class="nt">&lt;point</span> <span class="na">time=</span><span class="s">&quot;1558971402704626777&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;LeftElbowRoll&gt;</span>-33.50<span class="nt">&lt;/LeftElbowRoll&gt;</span>
+            <span class="nt">&lt;LeftShoulderPitch&gt;</span>89.90<span class="nt">&lt;/LeftShoulderPitch&gt;</span>
+            <span class="nt">&lt;LeftShoulderRoll&gt;</span>-64.80<span class="nt">&lt;/LeftShoulderRoll&gt;</span>
+            <span class="nt">&lt;RightElbowRoll&gt;</span>-30.60<span class="nt">&lt;/RightElbowRoll&gt;</span>
+            <span class="nt">&lt;RightShoulderPitch&gt;</span>-88.60<span class="nt">&lt;/RightShoulderPitch&gt;</span>
+            <span class="nt">&lt;RightShoulderRoll&gt;</span>-60.60<span class="nt">&lt;/RightShoulderRoll&gt;</span>
+        <span class="nt">&lt;/point&gt;</span>
+...
+</code></pre></div></p>
+<h3 id="qtrobot-joints-configuration">QTrobot Joints configuration</h3>
+<p>in QTRP, under <code class="codehilite"><span class="err">/opt/ros/kinetic/share/qt_motor/</span></code> there are motor controller config files:</p>
+<ul>
+<li>
+<p><strong><code class="codehilite"><span class="err">qtrobot-hardware.yaml</span></code></strong>: contains each motor configuration such as joints limit, PID, calibration offsets, etc.</p>
+</li>
+<li>
+<p><strong><code class="codehilite"><span class="err">qtrobot-controller.yaml</span></code></strong>:  contains QTrobot controller interface configuration such as <code class="codehilite"><span class="err">joint_state</span></code>, <code class="codehilite"><span class="err">gesture</span></code>, etc.  These interface are implemented using  ROS control system.</p>
+</li>
+</ul>
+<h3 id="qtrobot-urdf">QTRobot URDF</h3>
+<p>You can find the QTrobot URDF fils in the following links:
+ - <a href="https://github.com/luxai-qtrobot/QA/files/4381012/qtrobot.pdf">qtrobot.pdf</a>
+ - <a href="https://github.com/luxai-qtrobot/QA/files/4381016/qtrobot_urdf.zip">qtrobot_urdf.zip</a></p>
+<p>You can also load them in Gazebo to visualize joint configurations and test them:
+<div class="codehilite"><pre><span></span><code>$ roslaunch urdf_tutorial display.launch model:<span class="o">=</span>qtrobot.urdf
+</code></pre></div>
+you need to copy the <code class="codehilite"><span class="err">qtrobot.urdf</span></code> file to the proper folder in your PC (where you have installed Gazebo). Check the <code class="codehilite"><span class="err">display.launch</span></code> to find the path.</p>
                 
                   
                 
@@ -443,7 +560,7 @@ You can always open a new issue/feature request for any interfaces and we do our
                   <div class="md-source-date">
                     <small>
                       
-                        Last update: February 6, 2020
+                        Last update: July 14, 2020
                       
                     </small>
                   </div>
