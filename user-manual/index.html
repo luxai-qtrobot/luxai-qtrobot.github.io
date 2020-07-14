@@ -455,6 +455,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#11-updating-qtrobot-packages" class="md-nav__link">
+    11. Updating QTrobot packages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updating-to-the-latest-qtrobot-gesture-controller" class="md-nav__link">
+    Updating to the latest QTrobot gesture controller.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -849,6 +869,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#11-updating-qtrobot-packages" class="md-nav__link">
+    11. Updating QTrobot packages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updating-to-the-latest-qtrobot-gesture-controller" class="md-nav__link">
+    Updating to the latest QTrobot gesture controller.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -925,7 +965,7 @@ sudo poweroff
 </ul>
 <h3 id="accessing-qtrobot-via-ssh"><strong><em>Accessing QTROBOT via SSH</em></strong></h3>
 <div class="admonition tip">
-<p>After connecting to the robot WIFI hotspot, open a terminal from your PC and SSH to the robot using 'qtrobot' as hostname or using IP <code class="codehilite"><span class="err">192.168.100.1</span></code><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.
+<p>After connecting to the robot WIFI hotspot, open a terminal from your PC and SSH to the robot using 'qtrobot' as hostname or using IP <code class="codehilite"><span class="err">192.168.100.1</span></code><sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.
 <div class="codehilite"><pre><span></span><code>ssh qtrobot@qtrobot
 qtrobot@qt password:*******  
 </code></pre></div></p>
@@ -1140,6 +1180,28 @@ from std_msgs.msg import String
 pub.publish<span class="o">(</span><span class="s2">&quot;Hello! I am QT!&quot;</span><span class="o">)</span>
 </code></pre></div>
 
+<h2 id="11-updating-qtrobot-packages"><strong>11. Updating QTrobot packages</strong></h2>
+<div class="admonition warning">
+<p class="admonition-title">Notice</p>
+<p><strong><em>To update QTrobot packages your robot should be connected to the internet. For that you can follow instructions in <a href="#5-connecting-to-a-home-network-and-internet">5. Connecting to a Home Network and Internet</a></em></strong></p>
+</div>
+<h3 id="updating-to-the-latest-qtrobot-gesture-controller">Updating to the latest QTrobot gesture controller.</h3>
+<p><em>1. Connect to the robot WIFI hotspot, open a terminal from your PC and SSH to the QTrobot using 'qtrobot' as hostname or using IP <code class="codehilite"><span class="err">192.168.100.1</span></code><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.</em></p>
+<div class="codehilite"><pre><span></span><code>ssh qtrobot@192.168.100.1
+</code></pre></div>
+
+<p><em>2. Move to the "packages" folder and "pull" new updates from that folder.</em></p>
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/robot/packages <span class="o">&amp;&amp;</span> git pull
+</code></pre></div>
+
+<p><em>3. Install new packages (in 'robot/packages/deb') with this command:</em></p>
+<div class="codehilite"><pre><span></span><code>sudo dpkg -i deb/ros-kinetic-qt-gesture-controller_1.3.0-0xenial_armhf.deb.deb
+</code></pre></div>
+
+<details class="info"><summary>To install other packages</summary><div class="codehilite"><pre><span></span><code>sudo dpkg -i deb/ros-kinetic-&lt;name of the package&gt;.deb
+</code></pre></div>
+
+</details>
 <div class="footnote">
 <hr />
 <ol>
@@ -1150,7 +1212,7 @@ pub.publish<span class="o">(</span><span class="s2">&quot;Hello! I am QT!&quot;<
 <p>In this case you can notice a dim light on the power button.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
-<p>Windows users can use Putty (<a href="http://www.putty.org">www.putty.org</a>)&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p>Windows users can use Putty (<a href="http://www.putty.org">www.putty.org</a>)&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
