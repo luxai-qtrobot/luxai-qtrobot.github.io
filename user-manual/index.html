@@ -471,6 +471,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#how-to-update-ros-kinetic-qt-robot-interface" class="md-nav__link">
+    How to update ros-kinetic-qt-robot-interface.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#how-to-update-other-packages" class="md-nav__link">
     How to update other packages.
   </a>
@@ -892,6 +899,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#how-to-update-ros-kinetic-qt-robot-interface" class="md-nav__link">
+    How to update ros-kinetic-qt-robot-interface.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#how-to-update-other-packages" class="md-nav__link">
     How to update other packages.
   </a>
@@ -1200,13 +1214,13 @@ pub.publish<span class="o">(</span><span class="s2">&quot;Hello! I am QT!&quot;<
 <p><strong><em>To update QTrobot packages your robot should be connected to the internet. For that you can follow instructions in <a href="#5-connecting-to-a-home-network-and-internet">5. Connecting to a Home Network and Internet</a></em></strong></p>
 </div>
 <p>Connect to the robot WIFI hotspot, open a terminal from your PC and SSH to the QTrobot using <code class="codehilite"><span class="err">qtrobot</span></code> as hostname or using IP <code class="codehilite"><span class="err">192.168.100.1</span></code><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
-<div class="codehilite"><pre><span></span><code>ssh qtrobot@192.168.100.1
-</code></pre></div>
-
-<p>Following steps will explain how to update <code class="codehilite"><span class="err">ros-kinetic-qt-motor</span></code> package or other packages. Please follow the instructions carefully.</p>
-<h3 id="how-to-update-ros-kinetic-qt-motor-package"><strong><em>How to update ros-kinetic-qt-motor package.</em></strong></h3>
 <div class="admonition warning">
-<p><strong><em>make a copy of your current QTrobot configuration (<code class="codehilite"><span class="err">qtrobot-hardware.yaml</span></code>)</em></strong></p>
+<p><strong><em>For the <code class="codehilite"><span class="err">ros-kinetic-qt-motor</span></code> and <code class="codehilite"><span class="err">ros-kinetic-qt-robot-interface</span></code> packages you need to do a backup of the configuration before updating them.</em></strong></p>
+</div>
+<p>Following steps will explain how to update packages. Please follow the instructions carefully.</p>
+<h3 id="how-to-update-ros-kinetic-qt-motor-package"><strong><em>How to update <code class="codehilite"><span class="err">ros-kinetic-qt-motor package</span></code>.</em></strong></h3>
+<div class="admonition warning">
+<p><strong><em>make a copy of your current QTrobot hardware configuration (<code class="codehilite"><span class="err">qtrobot-hardware.yaml</span></code>)</em></strong></p>
 </div>
 <p>You need this file to put it back after updating the package:
 <div class="codehilite"><pre><span></span><code>cp /opt/ros/kinetic/share/qt_motor/config/qtrobot-hardware.yaml ~/
@@ -1217,8 +1231,24 @@ Move to the <code class="codehilite"><span class="err">packages</span></code> fo
 Install the latest version of <code class="codehilite"><span class="err">ros-kinetic-qt-motor</span></code>, in my case it is <code class="codehilite"><span class="err">1.2.0-0</span></code>:
 <div class="codehilite"><pre><span></span><code>sudo dpkg -i deb/ros-kinetic-qt-motor_1.2.0-0xenial_armhf.deb
 </code></pre></div>
-Put back your QTrobot configuration (<code class="codehilite"><span class="err">qtrobot-hardware.yaml</span></code>):
+Put back your QTrobot hardware configuration (<code class="codehilite"><span class="err">qtrobot-hardware.yaml</span></code>):
 <div class="codehilite"><pre><span></span><code>sudo cp ~/qtrobot-hardware.yaml /opt/ros/kinetic/share/qt_motor/config/
+</code></pre></div></p>
+<h3 id="how-to-update-ros-kinetic-qt-robot-interface"><strong><em>How to update <code class="codehilite"><span class="err">ros-kinetic-qt-robot-interface</span></code>.</em></strong></h3>
+<div class="admonition warning">
+<p><strong><em>make a copy of your current QTrobot interface configuration (<code class="codehilite"><span class="err">qtrobot-interface.yaml</span></code>)</em></strong></p>
+</div>
+<p>You need this file to put it back after updating the package:
+<div class="codehilite"><pre><span></span><code>cp /opt/ros/kinetic/share/qt_robot_interface/config/qtrobot-interface.yaml ~/
+</code></pre></div>
+Move to the <code class="codehilite"><span class="err">packages</span></code> folder and <code class="codehilite"><span class="err">pull</span></code> new updates from that folder.
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/robot/packages <span class="o">&amp;&amp;</span> git pull
+</code></pre></div>
+Install the latest version of <code class="codehilite"><span class="err">ros-kinetic-qt-robot-interface</span></code>, in my case it is <code class="codehilite"><span class="err">1.2.0-0</span></code>:
+<div class="codehilite"><pre><span></span><code>sudo dpkg -i deb/ros-kinetic-qt-robot-interface_1.2.0-0xenial_armhf.deb
+</code></pre></div>
+Put back your QTrobot interface configuration (<code class="codehilite"><span class="err">qtrobot-interface.yaml</span></code>):
+<div class="codehilite"><pre><span></span><code>sudo cp ~/qtrobot-interface.yaml /opt/ros/kinetic/share/qt_robot_interface/config/
 </code></pre></div></p>
 <h3 id="how-to-update-other-packages"><strong><em>How to update other packages.</em></strong></h3>
 <p>Move to the <code class="codehilite"><span class="err">packages</span></code> folder and <code class="codehilite"><span class="err">pull</span></code> new updates from that folder.</p>
@@ -1258,7 +1288,7 @@ Put back your QTrobot configuration (<code class="codehilite"><span class="err">
                   <div class="md-source-date">
                     <small>
                       
-                        Last update: July 14, 2020
+                        Last update: July 16, 2020
                       
                     </small>
                   </div>
