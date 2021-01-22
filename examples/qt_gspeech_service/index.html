@@ -1,0 +1,705 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Here you can find all documents about QTrobot.">
+      
+      
+        <link rel="canonical" href="https://luxai-qtrobot.github.io/examples/qt_gspeech_service/">
+      
+      
+        <meta name="author" content="QTrobot">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/luxai-favicon.ico">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>QTrobot Google Speech-To-Text ROS Service - QTrobot Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#qtrobot-google-speech-to-text-ros-service" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://luxai-qtrobot.github.io/" title="QTrobot Documentation" aria-label="QTrobot Documentation" class="md-header-nav__button md-logo">
+          
+            <img alt="logo" src="../../img/logo_luxai_white.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              QTrobot Documentation
+            </span>
+            <span class="md-header-nav__topic">
+              
+                QTrobot Google Speech-To-Text ROS Service
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://luxai-qtrobot.github.io/" title="QTrobot Documentation" class="md-nav__button md-logo">
+      
+        <img alt="logo" src="../../img/logo_luxai_white.png" width="48" height="48">
+      
+    </a>
+    QTrobot Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../user-manual/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../api/" title="API Reference" class="md-nav__link">
+      API Reference
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/Audio/" title="Audio" class="md-nav__link">
+      Audio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/Autostart/" title="Autostart" class="md-nav__link">
+      Autostart
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/Motors/" title="Motors" class="md-nav__link">
+      Motors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/Network/" title="Network" class="md-nav__link">
+      Network
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/Miscellaneous/" title="Miscellaneous" class="md-nav__link">
+      Miscellaneous
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/" title="Demos" class="md-nav__link">
+      Demos
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Examples" class="md-nav__link">
+      Examples
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../author-note/" title="Author's Note" class="md-nav__link">
+      Author's Note
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-qtrobot-with-pre-installed-google-speech-interface" class="md-nav__link">
+    1. QTrobot with pre-installed google speech interface
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-setup-google-cloud-and-download-your-private-key" class="md-nav__link">
+    1.1 Setup Google Cloud and download your private key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-connect-to-qtrobot-hotspot-and-ssh-to-qtrobot-and-initalize-google-cloud" class="md-nav__link">
+    1.2 Connect to QTrobot hotspot and ssh to QTrobot and initalize Google cloud
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-enable-qt_gspeech_interface" class="md-nav__link">
+    1.3 Enable qt_gspeech_interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-running-the-qtrobot-google-speech-ros-service" class="md-nav__link">
+    1.4 Running the QTrobot Google Speech Ros service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-full-installation-of-google-speech-interface" class="md-nav__link">
+    2. Full installation of google speech interface
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-install-python3-modules" class="md-nav__link">
+    2.1 Install python3 modules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-prepare-qtrobot-get-files-and-setup-the-environment" class="md-nav__link">
+    2.2 Prepare QTrobot (get files and setup the environment)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-setup-google-cloud" class="md-nav__link">
+    2.3 Setup Google Cloud
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-link-your-folder-and-build-catkin-qt_gspeech_interface-package" class="md-nav__link">
+    2.4 Link your folder and build catkin qt_gspeech_interface package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-running-the-qtrobot-google-speech-ros-service" class="md-nav__link">
+    2.5 Running the QTrobot Google Speech Ros service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-additional" class="md-nav__link">
+    2.6 Additional
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="qtrobot-google-speech-to-text-ros-service">QTrobot Google Speech-To-Text ROS Service</h1>
+<div class="admonition question">
+<p>Get the full code in our <a href="ttps://github.com/luxai-qtrobot/tutorials/blob/master/examples/qt_gspeech_interface/README.md">github tutorial repository.</a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Notice</p>
+<p><em>Everything should be installed on QTRP (head) - 192.168.100.1</em></p>
+</div>
+<hr />
+<h2 id="1-qtrobot-with-pre-installed-google-speech-interface"><strong>1. QTrobot with pre-installed google speech interface</strong></h2>
+<div class="admonition warning">
+<p class="admonition-title">Notice</p>
+<p><em>Please follow the instruction bellow if your QTrobot came with pre-installed google speech recognition</em></p>
+</div>
+<h3 id="11-setup-google-cloud-and-download-your-private-key"><strong><em>1.1 Setup Google Cloud and download your private key</em></strong></h3>
+<ul>
+<li>Follow the 1. Step from <a href="https://cloud.google.com/speech-to-text/docs/quickstart-client-libraries#before-you-begin">instructions</a> to setup your Google Console and SpeechToText</li>
+<li>From 1.Step <strong><em>Download a private key as JSON</em></strong> and save it inside <strong><em>"~/robot/code/tutorials/examples/qt_gspeech_interface"</em></strong> folder you will need it to run the application.</li>
+</ul>
+<h3 id="12-connect-to-qtrobot-hotspot-and-ssh-to-qtrobot-and-initalize-google-cloud"><strong><em>1.2 Connect to QTrobot hotspot and ssh to QTrobot and initalize Google cloud</em></strong></h3>
+<div class="codehilite"><pre><span></span><code>ssh qtrobot@192.168.100.1
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>gcloud init
+</code></pre></div>
+
+<div class="admonition info">
+<p>When initializing google cloud just follow the steps from command line (login to your google account, select your google-cloud-server)</p>
+</div>
+<h3 id="13-enable-qt_gspeech_interface"><strong><em>1.3 Enable qt_gspeech_interface</em></strong></h3>
+<div class="codehilite"><pre><span></span><code>sudo nano ~/robot/autostart/autostart_screen
+</code></pre></div>
+
+<div class="admonition info">
+<p>Uncomment the last line in autostart script "run_script "start_qt_gspeech_interface.sh"". Save it (Ctrl+O), exit (Ctrl+X) and reboot the QTrobot.</p>
+</div>
+<h3 id="14-running-the-qtrobot-google-speech-ros-service"><strong><em>1.4 Running the QTrobot Google Speech Ros service</em></strong></h3>
+<ul>
+<li><strong>To check if it is running you can list all rosservices</strong></li>
+</ul>
+<div class="codehilite"><pre><span></span><code>rosservice list
+</code></pre></div>
+
+<div class="admonition info">
+<p>You should see /qt_robot/speech/recognize</p>
+</div>
+<ul>
+<li><strong>To run:</strong></li>
+</ul>
+<div class="codehilite"><pre><span></span><code>rosservice call /qt_gspeech_service <span class="s2">&quot;language:&#39;&#39; options: - &#39;&#39; timeout:10&quot;</span>
+</code></pre></div>
+
+<hr />
+<h2 id="2-full-installation-of-google-speech-interface"><strong>2. Full installation of google speech interface</strong></h2>
+<ul>
+<li><strong>Connect to QTrobot hotspot and ssh to QTrobot</strong>
+<div class="codehilite"><pre><span></span><code>ssh qtrobot@192.168.100.1
+</code></pre></div></li>
+</ul>
+<h3 id="21-install-python3-modules"><strong><em>2.1 Install python3 modules</em></strong></h3>
+<div class="codehilite"><pre><span></span><code>sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get install python3-pip python3-yaml portaudio19-dev
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>pip3 install --user --upgrade pip
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>pip3 install rospkg pyaudio six
+</code></pre></div>
+
+<h3 id="22-prepare-qtrobot-get-files-and-setup-the-environment"><strong><em>2.2 Prepare QTrobot (get files and setup the environment)</em></strong></h3>
+<ul>
+<li><strong>Clone the github repository into "robot/code" folder</strong></li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/robot/code <span class="o">&amp;&amp;</span> git clone https://github.com/luxai-qtrobot/tutorials.git
+</code></pre></div>
+
+<ul>
+<li><strong>Copy the autostart script to autostart folder</strong></li>
+</ul>
+<div class="codehilite"><pre><span></span><code>cp ~/robot/code/tutorials/examples/qt_gspeech_interface/autostart/start_qt_gspeech_interface.sh ~/robot/autostart
+</code></pre></div>
+
+<ul>
+<li><strong>Enable the qt_gspeech_interface in autostart_screen.sh</strong></li>
+</ul>
+<div class="codehilite"><pre><span></span><code>nano ~/robot/autostart/autostart_screen.sh
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>run_script <span class="s2">&quot;start_qt_gspeech_interface.sh&quot;</span>
+</code></pre></div>
+
+<div class="admonition info">
+<p>Below the last command <em>"run_script"</em> copy and paste the command above. Save it (Ctrl+O) and exit (Ctrl+X).</p>
+</div>
+<h3 id="23-setup-google-cloud"><strong><em>2.3 Setup Google Cloud</em></strong></h3>
+<ul>
+<li>Follow the <a href="https://cloud.google.com/speech-to-text/docs/quickstart-client-libraries">instructions</a> to setup your Google Console and SpeechToText</li>
+<li>From 1.Step <strong><em>Download a private key as JSON</em></strong> and save it inside <strong><em>"~/robot/code/tutorials/examples/qt_gspeech_interface"</em></strong> folder you will need it to run the application.</li>
+<li>Install <a href="https://cloud.google.com/sdk/docs/install">Google Cloud SDK</a> and Google Cloud Python SDK (4.step)</li>
+<li>Install <a href="https://cloud.google.com/speech-to-text/docs/quickstart-client-libraries#install_the_client_library">Client Library</a> &rarr; use <strong>pip3</strong></li>
+</ul>
+<h3 id="24-link-your-folder-and-build-catkin-qt_gspeech_interface-package"><strong><em>2.4 Link your folder and build catkin qt_gspeech_interface package</em></strong></h3>
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/catkin_ws/src <span class="o">&amp;&amp;</span> ln -s ~/robot/code/tutorials/examples/qt_gspeech_interface .
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/catkin_ws <span class="o">&amp;&amp;</span> catkin_make --pkg qt_gspeech_interface
+</code></pre></div>
+
+<h3 id="25-running-the-qtrobot-google-speech-ros-service"><strong><em>2.5 Running the QTrobot Google Speech Ros service</em></strong></h3>
+<div class="admonition info">
+<p>Make sure that you have uncommented "run_script "start_qt_gspeech_interface.sh"" in autostart_screen.sh.
+After that just reboot the QTrobot.</p>
+</div>
+<ul>
+<li><strong>To check if it is running you can list all rosservices</strong></li>
+</ul>
+<div class="codehilite"><pre><span></span><code>rosservice list
+</code></pre></div>
+
+<div class="admonition info">
+<p>You should see /qt_robot/speech/recognize</p>
+</div>
+<ul>
+<li><strong>To run:</strong></li>
+</ul>
+<div class="codehilite"><pre><span></span><code>rosservice call /qt_gspeech_service <span class="s2">&quot;language:&#39;&#39; options: - &#39;&#39; timeout:10&quot;</span>
+</code></pre></div>
+
+<h3 id="26-additional"><strong><em>2.6 Additional</em></strong></h3>
+<ul>
+<li><strong>copy qt_gspeech_headers to your PC or QTPC</strong></li>
+</ul>
+<p><em>If you want to call this service outside of QTRP environment then you should copy content of qt_gspeech_headers to your catkin workspace</em></p>
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/robot/code/tutorials/examples/qt_gspeech_interface/qt_gspeech_headers <span class="o">&amp;&amp;</span> cp -r * ~/catkin_ws/devel/
+</code></pre></div>
+                
+                  
+                
+                
+                  
+                  <hr>
+                  <div class="md-source-date">
+                    <small>
+                      
+                        Last update: January 22, 2021
+                      
+                    </small>
+                  </div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        <!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Application footer -->
+<footer id="footer" class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; Copyright &copy; 2020 LuxAI S.A.
+          </div>
+        
+      </div>
+
+      <!-- Social links -->
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/luxai-qtrobot" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/qtrobot" target="_blank" rel="noopener" title="twitter" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/luxai/" target="_blank" rel="noopener" title="linkedin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://www.facebook.com/luxAI/" target="_blank" rel="noopener" title="facebook" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://www.youtube.com/channel/UCAY0H0HaqQL1GE7lO_iSpbg" target="_blank" rel="noopener" title="youtube" class="md-footer-social__link fa fa-youtube"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
