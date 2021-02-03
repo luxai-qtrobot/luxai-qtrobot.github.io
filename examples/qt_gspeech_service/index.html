@@ -434,22 +434,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#24-link-your-folder-and-build-catkin-qt_gspeech_interface-package" class="md-nav__link">
-    2.4 Link your folder and build catkin qt_gspeech_interface package
+  <a href="#25-link-your-folder-and-build-catkin-qt_gspeech_interface-package" class="md-nav__link">
+    2.5 Link your folder and build catkin qt_gspeech_interface package
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#25-running-the-qtrobot-google-speech-ros-service" class="md-nav__link">
-    2.5 Running the QTrobot Google Speech Ros service
+  <a href="#26-running-the-qtrobot-google-speech-ros-service" class="md-nav__link">
+    2.6 Running the QTrobot Google Speech Ros service
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#26-additional" class="md-nav__link">
-    2.6 Additional
+  <a href="#27-additional" class="md-nav__link">
+    2.7 Additional
   </a>
   
 </li>
@@ -583,14 +583,14 @@
 <li>From 1.Step <strong><em>Download a private key as JSON</em></strong> and save it inside <strong><em>"~/robot/code/tutorials/examples/qt_gspeech_interface"</em></strong> folder you will need it to run the application.</li>
 <li>Install <a href="https://cloud.google.com/sdk/docs/install">Google Cloud SDK</a> and Google Cloud Python SDK (4.step)</li>
 </ul>
-<h3 id="24-link-your-folder-and-build-catkin-qt_gspeech_interface-package"><strong><em>2.4 Link your folder and build catkin qt_gspeech_interface package</em></strong></h3>
+<h3 id="25-link-your-folder-and-build-catkin-qt_gspeech_interface-package"><strong><em>2.5 Link your folder and build catkin qt_gspeech_interface package</em></strong></h3>
 <div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/catkin_ws/src <span class="o">&amp;&amp;</span> ln -s ~/robot/code/tutorials/examples/qt_gspeech_interface .
 </code></pre></div>
 
 <div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/catkin_ws <span class="o">&amp;&amp;</span> catkin_make --pkg qt_gspeech_interface
 </code></pre></div>
 
-<h3 id="25-running-the-qtrobot-google-speech-ros-service"><strong><em>2.5 Running the QTrobot Google Speech Ros service</em></strong></h3>
+<h3 id="26-running-the-qtrobot-google-speech-ros-service"><strong><em>2.6 Running the QTrobot Google Speech Ros service</em></strong></h3>
 <div class="admonition info">
 <p>Make sure that you have uncommented "run_script "start_qt_gspeech_interface.sh"" in autostart_screen.sh.
 After that just reboot the QTrobot.</p>
@@ -610,7 +610,7 @@ After that just reboot the QTrobot.</p>
 <div class="codehilite"><pre><span></span><code>rosservice call /qt_gspeech_service <span class="s2">&quot;language:&#39;&#39; options: - &#39;&#39; timeout:10&quot;</span>
 </code></pre></div>
 
-<h3 id="26-additional"><strong><em>2.6 Additional</em></strong></h3>
+<h3 id="27-additional"><strong><em>2.7 Additional</em></strong></h3>
 <p><em>If you want to call this service outside of QTRP environment then you should copy content of qtpc_gspeech to your catkin workspace</em></p>
 <ul>
 <li><strong>copy qtpc_gspeech to your PC or QTPC</strong></li>
@@ -621,7 +621,7 @@ After that just reboot the QTrobot.</p>
 <div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/robot/code <span class="o">&amp;&amp;</span> git clone https://github.com/luxai-qtrobot/tutorials.git
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/catkin_ws/src/ <span class="o">&amp;&amp;</span> ln -s ~/robot/code/tutorials/examples/qt_gspeech_interface/qtpc_gspeech qt_gspeech_interface 
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/catkin_ws/src/ <span class="o">&amp;&amp;</span> ln -s ~/robot/code/tutorials/examples/qt_gspeech_interface/qtpc_gspeech qt_gspeech_interface
 </code></pre></div>
 
 <div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/catkin_ws <span class="o">&amp;&amp;</span> catkin_make --pkg qt_gspeech_interface
@@ -635,7 +635,7 @@ After that just reboot the QTrobot.</p>
                   <div class="md-source-date">
                     <small>
                       
-                        Last update: January 22, 2021
+                        Last update: February 3, 2021
                       
                     </small>
                   </div>
