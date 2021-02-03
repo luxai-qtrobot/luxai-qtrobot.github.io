@@ -406,22 +406,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-install-python3-modules" class="md-nav__link">
-    2.1 Install python3 modules
+  <a href="#21-prepare-qtrobot-get-files-and-setup-the-environment" class="md-nav__link">
+    2.1 Prepare QTrobot (get files and setup the environment)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-prepare-qtrobot-get-files-and-setup-the-environment" class="md-nav__link">
-    2.2 Prepare QTrobot (get files and setup the environment)
+  <a href="#22-install-python3-virtualenv-and-portaudio" class="md-nav__link">
+    2.2 Install python3 virtualenv and portaudio
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-setup-google-cloud" class="md-nav__link">
-    2.3 Setup Google Cloud
+  <a href="#23-create-python3-virtualenv-and-install-requirements" class="md-nav__link">
+    2.3 Create Python3 virtualenv and install requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-setup-google-cloud" class="md-nav__link">
+    2.4 Setup Google Cloud
   </a>
   
 </li>
@@ -528,17 +535,7 @@
 <div class="codehilite"><pre><span></span><code>ssh qtrobot@192.168.100.1
 </code></pre></div></li>
 </ul>
-<h3 id="21-install-python3-modules"><strong><em>2.1 Install python3 modules</em></strong></h3>
-<div class="codehilite"><pre><span></span><code>sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get install python3-pip python3-yaml portaudio19-dev
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>pip3 install --user --upgrade pip
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>pip3 install rospkg pyaudio six
-</code></pre></div>
-
-<h3 id="22-prepare-qtrobot-get-files-and-setup-the-environment"><strong><em>2.2 Prepare QTrobot (get files and setup the environment)</em></strong></h3>
+<h3 id="21-prepare-qtrobot-get-files-and-setup-the-environment"><strong><em>2.1 Prepare QTrobot (get files and setup the environment)</em></strong></h3>
 <ul>
 <li><strong>Clone the github repository into "robot/code" folder</strong></li>
 </ul>
@@ -563,12 +560,28 @@
 <div class="admonition info">
 <p>Below the last command <em>"run_script"</em> copy and paste the command above. Save it (Ctrl+O) and exit (Ctrl+X).</p>
 </div>
-<h3 id="23-setup-google-cloud"><strong><em>2.3 Setup Google Cloud</em></strong></h3>
+<h3 id="22-install-python3-virtualenv-and-portaudio"><strong><em>2.2 Install python3 virtualenv and portaudio</em></strong></h3>
+<div class="codehilite"><pre><span></span><code>sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get install python3-venv portaudio19-dev
+</code></pre></div>
+
+<h3 id="23-create-python3-virtualenv-and-install-requirements"><strong><em>2.3 Create Python3 virtualenv and install requirements</em></strong></h3>
+<div class="admonition info">
+<p>Install everything inside project folder (qt_gspeech_interface)</p>
+</div>
+<div class="codehilite"><pre><span></span><code>python3 -m venv .venv <span class="o">&amp;&amp;</span> <span class="nb">source</span> .venv/bin/activate
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>pip3 install --upgrade <span class="s2">&quot;pip &lt; 21.0&quot;</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>pip3 install -r requirements.txt
+</code></pre></div>
+
+<h3 id="24-setup-google-cloud"><strong><em>2.4 Setup Google Cloud</em></strong></h3>
 <ul>
 <li>Follow the <a href="https://cloud.google.com/speech-to-text/docs/quickstart-client-libraries">instructions</a> to setup your Google Console and SpeechToText</li>
 <li>From 1.Step <strong><em>Download a private key as JSON</em></strong> and save it inside <strong><em>"~/robot/code/tutorials/examples/qt_gspeech_interface"</em></strong> folder you will need it to run the application.</li>
 <li>Install <a href="https://cloud.google.com/sdk/docs/install">Google Cloud SDK</a> and Google Cloud Python SDK (4.step)</li>
-<li>Install <a href="https://cloud.google.com/speech-to-text/docs/quickstart-client-libraries#install_the_client_library">Client Library</a> &rarr; use <strong>pip3</strong></li>
 </ul>
 <h3 id="24-link-your-folder-and-build-catkin-qt_gspeech_interface-package"><strong><em>2.4 Link your folder and build catkin qt_gspeech_interface package</em></strong></h3>
 <div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/catkin_ws/src <span class="o">&amp;&amp;</span> ln -s ~/robot/code/tutorials/examples/qt_gspeech_interface .
@@ -598,11 +611,20 @@ After that just reboot the QTrobot.</p>
 </code></pre></div>
 
 <h3 id="26-additional"><strong><em>2.6 Additional</em></strong></h3>
+<p><em>If you want to call this service outside of QTRP environment then you should copy content of qtpc_gspeech to your catkin workspace</em></p>
 <ul>
-<li><strong>copy qt_gspeech_headers to your PC or QTPC</strong></li>
+<li><strong>copy qtpc_gspeech to your PC or QTPC</strong></li>
 </ul>
-<p><em>If you want to call this service outside of QTRP environment then you should copy content of qt_gspeech_headers to your catkin workspace</em></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/robot/code/tutorials/examples/qt_gspeech_interface/qt_gspeech_headers <span class="o">&amp;&amp;</span> cp -r * ~/catkin_ws/devel/
+<div class="admonition info">
+<p>These commands include "robot/code" folder just for the purpose of the example. Include your folder name in the command.</p>
+</div>
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/robot/code <span class="o">&amp;&amp;</span> git clone https://github.com/luxai-qtrobot/tutorials.git
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/catkin_ws/src/ <span class="o">&amp;&amp;</span> ln -s ~/robot/code/tutorials/examples/qt_gspeech_interface/qtpc_gspeech qt_gspeech_interface 
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> ~/catkin_ws <span class="o">&amp;&amp;</span> catkin_make --pkg qt_gspeech_interface
 </code></pre></div>
                 
                   
