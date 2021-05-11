@@ -454,6 +454,14 @@
 <hr />
 <p>The QTrobot is using ROS for easier access to basic robot functionalities with ROS publish/subscriber and Service/Client interfaces. Rospy is a pure Python client library for ROS. The rospy client API enables Python programmers to quickly interface with ROS Topics, Services, and Parameters.</p>
 <p>We will use Python code to read from QTrobot nuitrack <code class="codehilite"><span class="err">gesture</span></code> topic with rospy module. You can easily customize this code to read from any other Qtrobot nuitrack topic. Gesture topic publishes some basic human gestures recognition (SWIPE UP, SWIPE DOWN, SWIPE LEFT, SWIPE RIGHT, WAVING, PUSH).</p>
+<div class="admonition info">
+<p class="admonition-title">ROS Gestures message structure</p>
+<div class="codehilite"><pre><span></span><code>qt_nuitrack_app/GestureInfo<span class="o">[]</span> gestures
+    int32 id
+    string name
+</code></pre></div>
+
+</div>
 <p>You can also check "4.8 Human 3D Tracking Interface" chapter on <a href="http://wiki.ros.org/Robots/qtrobot#Human 3D Tracking Interface">Wiki ROS.</a></p>
 <p>To create a ROS subscriber we need topic name (Interface name), data type and callback for '/qt_nuitrack_app/gestures' interface.</p>
 <table>
