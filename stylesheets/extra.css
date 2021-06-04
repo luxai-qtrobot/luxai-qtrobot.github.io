@@ -1,40 +1,3 @@
-.devButton {
-	min-width: 200px;
-	background-color:#68b5e4;
-	margin-top: 20px;
-	margin-left: 20px;
-	margin-right: 20px;
-	border-radius:15px;
-	border:2px solid white;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff !important;
-	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow: 2px 2px 4px #000000;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-}
-.devButton:hover {
-	background-color:#afaed6;
-}
-.devButton:active {
-	position:relative;
-	top:1px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.5s;
-  width: 90%;
-  border-radius: 5px;
-	padding: 5px;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
 
 img {
   border-radius: 5px 5px 0 0;
@@ -43,30 +6,13 @@ img {
 	display: block;
 }
 
-
-.container {
-  padding: 2px 16px;
-}
-
-.youtube_color{
-    color: #85144b;
-}
-.github_color{
-    color: #FF4136;
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 0px;
-}
-
-[data-md-color-primary="indigo"] .md-tabs,
-[data-md-color-primary="indigo"] .md-header,
+[data-md-color-primary="deep-purple"] .md-tabs,
+[data-md-color-primary="deep-purple"] .md-header,
 
 footer {
 	background: rgb(175,174,214);
-	background: linear-gradient(180deg, rgba(175,174,214,1) 0%, rgba(104,181,228,1) 100%);
+	/* background: linear-gradient(180deg, rgba(175,174,214,1) 0%, rgba(104,181,228,1) 100%); */
+	background-color: #614b7f;
 }
 
 #footer {
@@ -84,6 +30,47 @@ footer {
   color: #ccc;
 }
 
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.5s;
+	width: 90%;
+	border-radius: 5px;
+	  padding: 5px;
+}
+  
+.card:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+border-radius: 5px 5px 0 0;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+
+.container {
+padding: 2px 16px;
+}
+
+.youtube_color{
+	color: #85144b;
+}
+.github_color{
+	color: #FF4136;
+}
+
+.wrapper {
+display: grid;
+grid-template-columns: 50% 50%;
+grid-gap: 0px;
+}
+
+.md-typeset{
+	text-align: justify;
+}
+
 .md-footer-nav,
 .md-footer-meta {
     background: transparent;
@@ -98,6 +85,9 @@ footer {
 	  width: 100% !important;
 	}
 	.md-nav__title {
-	    background: linear-gradient(180deg, rgba(175,174,214,1) 0%, rgba(104,181,228,1) 100%);
+	    /* background: linear-gradient(180deg, rgba(175,174,214,1) 0%, rgba(104,181,228,1) 100%); */
+		background: rgb(175,174,214);
+		background-color: #614b7f;
 	}
 }
+
