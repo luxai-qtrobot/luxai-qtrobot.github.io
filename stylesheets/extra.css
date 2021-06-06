@@ -1,8 +1,8 @@
 
 img {
-  border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
 	margin-left: auto;
- 	margin-right: auto;
+	margin-right: auto;
 	display: block;
 }
 
@@ -35,19 +35,11 @@ footer {
 	transition: 0.5s;
 	width: 90%;
 	border-radius: 5px;
-	  padding: 5px;
+	padding: 5px;
 }
   
 .card:hover {
-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-
-img {
-border-radius: 5px 5px 0 0;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 
@@ -63,9 +55,9 @@ padding: 2px 16px;
 }
 
 .wrapper {
-display: grid;
-grid-template-columns: 50% 50%;
-grid-gap: 0px;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-gap: 0px;
 }
 
 .md-typeset > h1 {
@@ -82,11 +74,11 @@ grid-gap: 0px;
 
 @media (max-width: 768px) {
 	.wrapper {
-	  grid-template-columns: 100% !important;
-	  grid-gap: 10px !important;
+		grid-template-columns: 100% !important;
+		grid-gap: 10px !important;
 	}
 	.card {
-	  width: 100% !important;
+		width: 100% !important;
 	}
 	.md-nav__title {
 	    /* background: linear-gradient(180deg, rgba(175,174,214,1) 0%, rgba(104,181,228,1) 100%); */
