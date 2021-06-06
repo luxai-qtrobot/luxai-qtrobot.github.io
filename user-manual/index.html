@@ -640,11 +640,9 @@ QTPC is already prepared and configured to work with roscore which is running on
 <hr />
 <h2 id="2-how-to-work-with-qtrobot">2. How to work with QTrobot</h2>
 <p>There are few ways of working with QTrobot. We recommend working on QTPC, which is the fastest and easiest way to start.</p>
-<div class="admonition info">
-<p class="admonition-title">[Step 1] Turn on QTrobot<p>To power the QTrobot on, simply connect the QTrobot's power supply<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.This triggers the power on process and your QTrobot becomes ready less than a minute. After powering on, you can see the QTrobot face is on and the motors are in their home position. If the QTrobot is already connected to the power supply simply
+<details class="example"><summary>[Step 1] Turn on QTrobot</summary><p>To power the QTrobot on, simply connect the QTrobot's power supply<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.This triggers the power on process and your QTrobot becomes ready less than a minute. After powering on, you can see the QTrobot face is on and the motors are in their home position. If the QTrobot is already connected to the power supply simply
 push the power button to turn on the QTrobot.</p>
-</p>
-</div>
+</details>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Working on QTPC</label><div class="tabbed-content">
 <details class="example"><summary>[Step 2] Connect keyboard/mouse and monitor to QTPC</summary><p>Connect keyboard, mouse and HDMI Monitor to your USB-C extention then plug it in the USB-C port at the back of QTrobot. </p>
 <p><figure>
@@ -661,7 +659,7 @@ push the power button to turn on the QTrobot.</p>
 </details>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Working from your Laptop</label><div class="tabbed-content">
-<details class="example"><summary>[Step 1] Setup your ROS environment</summary><div class="admonition info">
+<details class="example"><summary>[Step 2] Setup your ROS environment</summary><div class="admonition info">
 <p class="admonition-title">Notice</p>
 <p>For this steps you wiil need ROS installed on your computer. If you don't have it please follow this instalation <a href="http://wiki.ros.org/ROS/Installation">instructions</a> </p>
 </div>
@@ -710,7 +708,7 @@ Write down or copy IP address that is written of wifi <strong>inet</strong> (e.g
 </li>
 </ol>
 </details>
-<details class="example"><summary>[Step 2] Test your setup</summary><p>Last step is to connect to the QTrobot Wi-Fi hotspot and test your ROS environment.
+<details class="example"><summary>[Step 3] Test your setup</summary><p>Last step is to connect to the QTrobot Wi-Fi hotspot and test your ROS environment.
 One option is to list all ROS topics that are running on QTRobot:</p>
 <div class="highlight"><pre><span></span><code>rostopic list
 </code></pre></div>
@@ -891,6 +889,10 @@ run_script &quot;start_my_script.sh&quot;
 </details>
 </li>
 </ul>
+<div class="admonition question">
+<p class="admonition-title">Can't find what you're looking for?</p>
+<p><center><a class="md-button" href="https://github.com/luxai-qtrobot/QA/issues/new"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm9 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 0 1 9 6.25c0 .177-.04.264-.077.318a.956.956 0 0 1-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 0 0-.313.195 2.416 2.416 0 0 0-.692.661.75.75 0 0 0 1.248.832.956.956 0 0 1 .276-.245 6.3 6.3 0 0 1 .26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 0 0 8 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 1 0 1.342.67z"/></svg></span> ASK YOUR QUESTION HERE</a></center></p>
+</div>
 <div class="footnote">
 <hr />
 <ol>
@@ -910,7 +912,7 @@ run_script &quot;start_my_script.sh&quot;
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 4, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 6, 2021</span>
       
     
   </small>
