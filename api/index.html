@@ -651,24 +651,18 @@
                 
                   <h1>API Reference</h1>
                 
-                <div class="admonition question">
-<p class="admonition-title">Can't find what you're looking for?</p>
-<p><center><a class="md-button" href="https://github.com/luxai-qtrobot/QA/issues/new"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm9 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM6.92 6.085c.081-.16.19-.299.34-.398.145-.097.371-.187.74-.187.28 0 .553.087.738.225A.613.613 0 0 1 9 6.25c0 .177-.04.264-.077.318a.956.956 0 0 1-.277.245c-.076.051-.158.1-.258.161l-.007.004a7.728 7.728 0 0 0-.313.195 2.416 2.416 0 0 0-.692.661.75.75 0 0 0 1.248.832.956.956 0 0 1 .276-.245 6.3 6.3 0 0 1 .26-.16l.006-.004c.093-.057.204-.123.313-.195.222-.149.487-.355.692-.662.214-.32.329-.702.329-1.15 0-.76-.36-1.348-.863-1.725A2.76 2.76 0 0 0 8 4c-.631 0-1.155.16-1.572.438-.413.276-.68.638-.849.977a.75.75 0 1 0 1.342.67z"/></svg></span> ASK YOUR QUESTION HERE</a></center></p>
-</div>
-<hr />
-<h2 id="qtrobot-interface"><strong>QTrobot Interface</strong></h2>
-<p>The <a href="https://www.luxai.com">QTrobot</a> interface aims to facilitate accessing basic robot functionalities leveraging a set of user-friendly ROS interfaces. Each robot’s functionality can be accessed in blocking and non-blocking mode using ROS publish/subscribe and Service/Client interfaces. Following are the main interfaces of QTrobot:</p>
+                <h2 id="qtrobot-interface"><strong>QTrobot Interface</strong></h2>
+<p>The <a href="https://www.luxai.com">QTrobot</a> ROS interface aims to facilitate accessing basic robot functionalities through a set of user-friendly ROS APIs. ROS is the de-facto standard robotic framework and <a href="https://wiki.ros.org/Documentation">basic knowledge of ROS</a> is required to work with the QTrobot’s ROS SDK. 
+Most of  QTrobot’s functionalities can be accessed in both blocking and non-blocking modes using ROS publish/subscribe and Service/Client interfaces. Following are the main interfaces of QTrobot:</p>
 <ul>
-<li><strong><em>QTrobot Emotion</em></strong> : implements robot facial emotion</li>
-<li><strong><em>QTrobot Speech</em></strong> : implements robot text to speech functionality</li>
-<li><strong><em>QTrobot Audio</em></strong> : implement a simple player to play standard audio files</li>
-<li><strong><em>QTrobot Gesture</em></strong> : implements robot gesture control</li>
-<li><strong><em>QTrobot Behavior</em></strong> : implements more complex behaviors by combining 
- the robot basic functionality</li>
-<li><strong><em>QTrobot Motor</em></strong> : implements robot motor controls using standard <a href="http://wiki.ros.org/ros_control">ros_control</a></li>
-<li><strong><em>QTrobot 3D Camera</em></strong> : implements different human 3D body and facial 
- tracking including human full body skeleton, hands pos and gestures, facial and emotion recognition using Intel Realsense camera and <a href="https://nuitrack.com/" title="wikilink">Nuitrack SDK</a></li>
-<li><strong><em>QTrobot Settings</em></strong> : implements some basic setting of robot such as speaker volume control</li>
+<li><strong>QTrobot Emotion</strong>: implements robot facial emotion</li>
+<li><strong>QTrobot Speech</strong>: implements robot text to speech functionality</li>
+<li><strong>QTrobot Audio</strong>: implement a simple player to play standard audio files</li>
+<li><strong>QTrobot Gesture</strong>: implements robot gesture control</li>
+<li><strong>QTrobot Behavior</strong>: implements more complex behaviors by combining the robot basic functionality</li>
+<li><strong>QTrobot Motor</strong>: implements robot motor controls using standard <a href="http://wiki.ros.org/ros_control">ros_control</a></li>
+<li><strong>QTrobot 3D-Camera</strong>: implements different human 3D body and facial tracking using Intel Realsense camera and <a href="https://nuitrack.com/" title="wikilink">Nuitrack SDK</a></li>
+<li><strong>QTrobot Settings</strong>: implements some basic setting of robot such as speaker volume control</li>
 </ul>
 <p>and some extra interfaces which are available for some models of
 QTrobot:</p>
@@ -1323,7 +1317,7 @@ previous one using ROS Service/Client method from python:</p>
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 6, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 7, 2021</span>
       
     
   </small>

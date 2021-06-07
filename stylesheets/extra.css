@@ -63,6 +63,11 @@ padding: 2px 16px;
 .md-typeset > h1 {
 	text-align: center;
 }
+
+.md-typeset > ul {
+	text-align: left;
+}
+
 .md-typeset{
 	text-align: justify;
 }
